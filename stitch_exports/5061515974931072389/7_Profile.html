@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Professional Profile - Julian Ashford</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a1a1a",
+                        "accent": "#2463eb",
+                        "background-light": "#f8f9fa",
+                        "surface": "rgba(255, 255, 255, 0.7)",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+        }
+        .ios-tab-shadow {
+            box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.05);
+        }
+        .pb-safe {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+    </style>
+</head>
+<body class="bg-background-light text-slate-900 min-h-screen flex flex-col">
+<!-- Header Navigation -->
+<header class="sticky top-0 z-50 bg-background-light/80 backdrop-blur-md">
+<div class="flex items-center justify-between p-4 max-w-2xl mx-auto w-full">
+<button class="p-2 hover:bg-slate-200/50 rounded-full transition-colors">
+<span class="material-symbols-outlined block">arrow_back</span>
+</button>
+<h1 class="text-base font-semibold tracking-tight">Profile</h1>
+<button class="p-2 hover:bg-slate-200/50 rounded-full transition-colors">
+<span class="material-symbols-outlined block">settings</span>
+</button>
+</div>
+</header>
+<main class="flex-1 max-w-2xl mx-auto w-full pb-32">
+<!-- Profile Header -->
+<section class="flex flex-col items-center p-8 gap-5">
+<div class="relative">
+<div class="w-28 h-28 rounded-full ring-4 ring-white shadow-xl bg-cover bg-center overflow-hidden" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDa0QoyG9w0aqIacX1jezazMiQxNOF1vkL0SCbsW1r3tFAU_kQ5WpA5cUPIykCDeHnrXUm1Y1B2vCGKj4LfAEg0i8AcM-e4DfWwrDB_s0mpEQqdbHoZzCf3gV5QC-qST64DE7Vc_rO5eH2UYtkSFPbwpTBoVGqCwgGI-_SlZFW3489aBnnm-N0O2xI1nRTViO5y2WYf8jsFzdosnjni1RINuD-aejjx4tij2ngaS1TQ6uYLrp8u94xHZtdWGbYr2xAOvLLLRC1vfto')">
+</div>
+<div class="absolute bottom-1 right-1 bg-accent p-1 rounded-full border-2 border-white shadow-sm">
+<span class="material-symbols-outlined text-white text-[10px] block font-bold">check</span>
+</div>
+</div>
+<div class="text-center">
+<h2 class="text-2xl font-bold text-slate-900 tracking-tight">Julian Ashford</h2>
+<p class="text-slate-500 font-medium text-sm mt-1">Principal Architect &amp; Builder</p>
+<div class="flex items-center justify-center gap-1 mt-2 text-slate-400 text-xs font-medium">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span>London, UK</span>
+</div>
+</div>
+</section>
+<!-- Stats Grid -->
+<section class="grid grid-cols-3 gap-3 px-4 mb-8">
+<div class="glass-card p-4 rounded-2xl flex flex-col items-center justify-center">
+<span class="text-xl font-bold text-slate-900">42</span>
+<span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Projects</span>
+</div>
+<div class="glass-card p-4 rounded-2xl flex flex-col items-center justify-center">
+<span class="text-xl font-bold text-slate-900">128</span>
+<span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Vendors</span>
+</div>
+<div class="glass-card p-4 rounded-2xl flex flex-col items-center justify-center">
+<span class="text-xl font-bold text-slate-900">560</span>
+<span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Saved</span>
+</div>
+</section>
+<!-- Upgrade Banner - Minimalist -->
+<section class="px-4 mb-8">
+<div class="bg-primary rounded-3xl p-6 flex items-center justify-between gap-4">
+<div>
+<h3 class="text-white text-base font-bold">Upgrade to Pro</h3>
+<p class="text-slate-400 text-xs mt-0.5">Unlock premium features.</p>
+</div>
+<button class="bg-white text-primary px-5 py-2 rounded-full font-bold text-xs hover:bg-slate-100 transition-colors">
+                    Go Pro
+                </button>
+</div>
+</section>
+<!-- Settings List -->
+<section class="px-4 space-y-6">
+<div>
+<h4 class="px-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">Workspace</h4>
+<div class="glass-card rounded-3xl overflow-hidden divide-y divide-slate-100">
+<a class="flex items-center gap-4 p-4 hover:bg-white/50 transition-colors" href="#">
+<div class="bg-slate-100 p-2 rounded-xl text-slate-600">
+<span class="material-symbols-outlined block text-xl">folder_special</span>
+</div>
+<span class="flex-1 font-semibold text-sm">My Portfolio</span>
+<span class="material-symbols-outlined text-slate-300 text-xl">chevron_right</span>
+</a>
+<a class="flex items-center gap-4 p-4 hover:bg-white/50 transition-colors" href="#">
+<div class="bg-slate-100 p-2 rounded-xl text-slate-600">
+<span class="material-symbols-outlined block text-xl">bookmark</span>
+</div>
+<span class="flex-1 font-semibold text-sm">Saved Items</span>
+<span class="material-symbols-outlined text-slate-300 text-xl">chevron_right</span>
+</a>
+<a class="flex items-center gap-4 p-4 hover:bg-white/50 transition-colors" href="#">
+<div class="bg-slate-100 p-2 rounded-xl text-slate-600">
+<span class="material-symbols-outlined block text-xl">group</span>
+</div>
+<span class="flex-1 font-semibold text-sm">Vendors Directory</span>
+<span class="material-symbols-outlined text-slate-300 text-xl">chevron_right</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="px-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">Account</h4>
+<div class="glass-card rounded-3xl overflow-hidden divide-y divide-slate-100">
+<a class="flex items-center gap-4 p-4 hover:bg-white/50 transition-colors" href="#">
+<div class="bg-slate-100 p-2 rounded-xl text-slate-600">
+<span class="material-symbols-outlined block text-xl">manage_accounts</span>
+</div>
+<span class="flex-1 font-semibold text-sm">Account Settings</span>
+<span class="material-symbols-outlined text-slate-300 text-xl">chevron_right</span>
+</a>
+<a class="flex items-center gap-4 p-4 hover:bg-white/50 transition-colors" href="#">
+<div class="bg-slate-100 p-2 rounded-xl text-slate-600">
+<span class="material-symbols-outlined block text-xl">credit_card</span>
+</div>
+<div class="flex-1 flex flex-col">
+<span class="font-semibold text-sm">Subscription Plan</span>
+<span class="text-[10px] text-slate-400 font-medium">Free Tier</span>
+</div>
+<span class="material-symbols-outlined text-slate-300 text-xl">chevron_right</span>
+</a>
+<a class="flex items-center gap-4 p-4 hover:bg-red-50/50 transition-colors" href="#">
+<div class="bg-red-50 p-2 rounded-xl text-red-500">
+<span class="material-symbols-outlined block text-xl">logout</span>
+</div>
+<span class="flex-1 font-semibold text-sm text-red-500">Sign Out</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar - Standardized to 5 items with premium glassmorphism -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white/80 backdrop-blur-xl border-t border-slate-200/50 pb-safe z-50">
+<div class="flex justify-around items-center h-16 max-w-2xl mx-auto px-2">
+<a class="flex flex-col items-center justify-center gap-1 text-slate-400 hover:text-accent transition-colors flex-1" href="#">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<span class="text-[10px] font-semibold uppercase tracking-tight">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-slate-400 hover:text-accent transition-colors flex-1" href="#">
+<span class="material-symbols-outlined text-[24px]">storefront</span>
+<span class="text-[10px] font-semibold uppercase tracking-tight">Marketplace</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-slate-400 hover:text-accent transition-colors flex-1" href="#">
+<span class="material-symbols-outlined text-[24px]">auto_awesome</span>
+<span class="text-[10px] font-semibold uppercase tracking-tight">AI Tools</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-slate-400 hover:text-accent transition-colors flex-1" href="#">
+<span class="material-symbols-outlined text-[24px]">layers</span>
+<span class="text-[10px] font-semibold uppercase tracking-tight">Projects</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-accent flex-1" href="#">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1">person</span>
+<span class="text-[10px] font-semibold uppercase tracking-tight">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

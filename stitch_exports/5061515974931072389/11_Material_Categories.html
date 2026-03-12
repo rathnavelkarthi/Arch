@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BuildVerse - Material Categories</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2463eb",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-md mx-auto px-4 py-4 flex items-center justify-between">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">arrow_back</span>
+</button>
+<h1 class="text-lg font-semibold tracking-tight">Material Categories</h1>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">search</span>
+</button>
+</div>
+</header>
+<main class="flex-1 max-w-md mx-auto w-full px-4 pb-24">
+<div class="py-8">
+<h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white mb-2">Browse Materials</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Find the perfect materials for your architectural vision.</p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="group flex flex-col gap-4 p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 hover:border-primary transition-all cursor-pointer">
+<div class="w-12 h-12 flex items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">grid_view</span>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white">Tiles</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">Ceramic &amp; Stone</p>
+</div>
+</div>
+<div class="group flex flex-col gap-4 p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 hover:border-primary transition-all cursor-pointer">
+<div class="w-12 h-12 flex items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">lightbulb</span>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white">Lighting</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">Indoor &amp; Outdoor</p>
+</div>
+</div>
+<div class="group flex flex-col gap-4 p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 hover:border-primary transition-all cursor-pointer">
+<div class="w-12 h-12 flex items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">window</span>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white">Windows</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">Energy Efficient</p>
+</div>
+</div>
+<div class="group flex flex-col gap-4 p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 hover:border-primary transition-all cursor-pointer">
+<div class="w-12 h-12 flex items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">door_open</span>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white">Doors</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">Modern &amp; Classic</p>
+</div>
+</div>
+<div class="group flex flex-col gap-4 p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 hover:border-primary transition-all cursor-pointer">
+<div class="w-12 h-12 flex items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">texture</span>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white">Flooring</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">Timber &amp; Vinyl</p>
+</div>
+</div>
+<div class="group flex flex-col gap-4 p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 hover:border-primary transition-all cursor-pointer">
+<div class="w-12 h-12 flex items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">roofing</span>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white">Roofing</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">Metal &amp; Concrete</p>
+</div>
+</div>
+<div class="group flex flex-col gap-4 p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 hover:border-primary transition-all cursor-pointer">
+<div class="w-12 h-12 flex items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">water_drop</span>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white">Plumbing</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">Fixtures &amp; Smart</p>
+</div>
+</div>
+<div class="group flex flex-col gap-4 p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 hover:border-primary transition-all cursor-pointer">
+<div class="w-12 h-12 flex items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white">Electrical</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">Smart Systems</p>
+</div>
+</div>
+</div>
+<div class="mt-8 rounded-xl bg-primary/5 border border-primary/20 p-6 flex items-center justify-between">
+<div class="max-w-[200px]">
+<h4 class="font-bold text-slate-900 dark:text-white">Custom Request?</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Can't find what you need? Use our AI material scout.</p>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors">
+                Try AI Scout
+            </button>
+</div>
+</main>
+<nav class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 pb-safe">
+<div class="max-w-md mx-auto flex justify-between items-center px-4 py-3">
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">storefront</span>
+<span class="text-[10px] font-medium">Marketplace</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span class="text-[10px] font-medium">AI Tools</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">folder_shared</span>
+<span class="text-[10px] font-medium">Projects</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

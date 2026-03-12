@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BuildVerse - Splash Screen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#000000",
+                        "background-light": "#F8F9FA",
+                        "slate-card": "#FFFFFF",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: 100dvh;
+        }
+        .line-art-glow {
+            filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.08));
+        }
+    </style>
+</head>
+<body class="bg-background-light font-display text-slate-900">
+<div class="relative flex h-screen w-full flex-col bg-background-light overflow-hidden">
+<!-- Logo Section - Iconic Style -->
+<div class="flex flex-col items-center pt-24">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-12 h-12 bg-black rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-white font-bold text-2xl">architecture</span>
+</div>
+<h1 class="text-3xl font-bold tracking-tight text-slate-900">BuildVerse</h1>
+</div>
+</div>
+<!-- Center Image Section -->
+<div class="flex grow items-center justify-center px-8">
+<div class="relative w-full max-w-sm aspect-square flex items-center justify-center">
+<!-- Decorative Frame -->
+<div class="absolute inset-0 bg-[#EFE9DB] rounded-lg shadow-sm border border-black/5 p-8 flex items-center justify-center">
+<div class="w-full h-full bg-white p-4 shadow-inner flex items-center justify-center">
+<div class="relative w-full h-full bg-center bg-no-repeat bg-contain opacity-90" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC_5LiOnUoHGC70EjRds-lBJaDgte868sc678y6T6Tlr97IXCrXpVZ7_LHsEqIfc66rkdAT6mxAjnIKUQjaU0_cEFaou7k_qTFRpy1sE3NWigvjfu2g2bcRJy7ozVCZET6XG69WROeAplEK8Vx_G7TIeoWgMxDVzTKvK6qbUT2bulkrEI6oN7ImEZjgszhq7kpZ7sT_KUlQ1r7MeZf3G84Qm9aSePT_VUF0S43EQhJM2zIEopGdQhawjX5r5-v_guG21VFFQyzqHdk");'>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Content Section -->
+<div class="flex flex-col items-center px-8 pb-20 space-y-12">
+<!-- Tagline - Iconic Brazil Style -->
+<div class="text-center">
+<h3 class="text-slate-900 text-4xl font-bold leading-[1.1] tracking-tight mb-4">
+                    Build Smarter.<br/>Design Faster.
+                </h3>
+<p class="text-slate-400 text-[11px] font-bold tracking-[0.25em] uppercase">
+                    The Next-Gen PropTech Ecosystem
+                </p>
+</div>
+<!-- Loading Indicator -->
+<div class="w-full max-w-[240px] space-y-3">
+<div class="flex justify-between items-end px-0.5">
+<p class="text-[10px] font-bold text-slate-300 uppercase tracking-[0.2em]">Loading</p>
+<p class="text-[12px] font-bold text-slate-900">65%</p>
+</div>
+<div class="relative h-[2px] w-full bg-slate-200 rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-black rounded-full transition-all duration-500" style="width: 65%;"></div>
+</div>
+</div>
+</div>
+<!-- Subtle Texture Overlay -->
+<div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.02] pointer-events-none"></div>
+</div>
+</body></html>

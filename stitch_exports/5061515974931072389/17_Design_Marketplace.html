@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BuildVerse | Architectural Marketplace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2463eb",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                        "surface-dark": "#1a2130",
+                        "border-dark": "#2d364a"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen pb-24">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-border-dark px-4 py-4">
+<div class="flex items-center justify-between max-w-5xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">architecture</span>
+<h1 class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-50 font-display">BuildVerse</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-surface-dark transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-surface-dark transition-colors relative">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-primary rounded-full"></span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-5xl mx-auto px-4 py-6">
+<!-- Hero Section / Categories -->
+<section class="mb-8">
+<h2 class="text-sm font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-4">Categories</h2>
+<div class="flex gap-4 overflow-x-auto hide-scrollbar pb-2">
+<div class="flex flex-col items-center gap-2 min-w-[80px]">
+<div class="w-16 h-24 rounded-xl bg-cover bg-center ring-2 ring-primary ring-offset-2 dark:ring-offset-background-dark" data-alt="Modern luxury villa with pool facade" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5DiOxBLq_hoxX87LmYJS12G727zvo6kLWUK00nzmjWPrNfGX47LlRCDs7n0IXgTeXNzdY61C5rQIdUw7xJpiG9QCGUQSh10B08i6oSUB49WlGcR0NRXND_cORWUJagVVxtw_CW1VaQdm0VHl-VETAHDo9yvvjzdbvYGX8r90PtHWMSpQ9tcWqwDJ7h0JzLbnuAOwT3D9HHyjjFlwqQc_7rV0PLECMerIwL990ft64lTtpYA66aQmQ5pWTgZddMGtIhyb-xkPwlwI')"></div>
+<span class="text-xs font-medium">Villa</span>
+</div>
+<div class="flex flex-col items-center gap-2 min-w-[80px]">
+<div class="w-16 h-24 rounded-xl bg-cover bg-center grayscale hover:grayscale-0 transition-all" data-alt="Corporate office interior glass windows" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBg5IsXqD5RZJ1GvU29LzY5Pqv6druOzTPzL99rOpQJBJmLS1-jmbP7pbyxfzD-Wshtu6lnYrVsVfSDluh9Zg4ebuv_m60jb0L1Ew0n0pkMz_M2FNnS9wNCJqBUhUuk4OFvC_dqWqBqHf-iEkwhmznPFqGHeKLjh_NubACIl-Ho2D2d0qcYGq3UO1gxMgbjqqWYmMBLn9gqfbsCqY41VaWYZj0dBdr-9Nvic13ahEf5lv7CWZzxDZD2GzCxgtMxtVZM_a5KzACZDw8')"></div>
+<span class="text-xs font-medium text-slate-500">Office</span>
+</div>
+<div class="flex flex-col items-center gap-2 min-w-[80px]">
+<div class="w-16 h-24 rounded-xl bg-cover bg-center grayscale hover:grayscale-0 transition-all" data-alt="Industrial loft interior high ceilings" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDmpcH6ayVCjZixh5k47nha7W0X16YGyvcG_1HlbD1VqsrJt4f9EGsFZqciuFZFR2E5ARJWcYnHfSfgZQA6zkl01x1k8BTrog1O3bEGP6M7IbbZ3RCRiTdccYkNseTWgnyPFn8KuJLtcggu9wusQ5DqdlnRZnN95ifLsgZuGwdqnyFBN5TXewZJJqaB6jLORl0d4pSvsFtKaaUCfsT2TMrWpgTHXPsyR4FGkSSvJnGZ4qbRnU2rxy2fPUDsBWOGzu2rszZnH2gQpzY')"></div>
+<span class="text-xs font-medium text-slate-500">Loft</span>
+</div>
+<div class="flex flex-col items-center gap-2 min-w-[80px]">
+<div class="w-16 h-24 rounded-xl bg-cover bg-center grayscale hover:grayscale-0 transition-all" data-alt="Minimalist urban skyscraper detail" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDu2-Nt-v01Rr9i6I2YMJE1cnfSpPEphp53pDVEJxR7RgCcJiB7jkVLFi8NS4DyeV6vrC0kedxH5MCLmsfkyqx2DgHpNPhHnuynC7YOM_NSvlvTOj4CnhjIiOJjUZj-kjalxbUgdNIR_mVMr0-FKxnyBKHBNOyoXEpp_Fh9K-G1cGpe8qUIRM8DSF_qYSdz60r_m3ecf0gUi-YT9Sx4doM1_7fK_Sp6nbPuvYg1exy_FzUHqc4HCEaSwaIWv_S4TPzf7j9gUVsplY8')"></div>
+<span class="text-xs font-medium text-slate-500">Urban</span>
+</div>
+<div class="flex flex-col items-center gap-2 min-w-[80px]">
+<div class="w-16 h-24 rounded-xl bg-cover bg-center grayscale hover:grayscale-0 transition-all" data-alt="Cozy wooden cabin in woods" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBjigP-ClbSlBiyZkJm1-beGV90l43AJo7RYdeZ_irrhWJHyH-Fzi1BJNnNJ4XdEwb74CpQtIpnXMtJjp8aQQk9Dog0XxZ16fBaBcBiHXlyABl9i7go_nrN9MRfn317CVOvvvsV_l1jfwC4k7c03ntrHTKeGbIgDIrHdXSOC9-YXxaOVTsh8uPv4jdw_56-1VI3yTiuU2-b0vzsVQ321kVbudq_7uTa9GTiniDIqYUHiQvigyZNT5WZ4-nqMFVMDj1AOFJXFehVygU')"></div>
+<span class="text-xs font-medium text-slate-500">Cabin</span>
+</div>
+<div class="flex flex-col items-center gap-2 min-w-[80px]">
+<div class="w-16 h-24 rounded-xl bg-cover bg-center grayscale hover:grayscale-0 transition-all" data-alt="Modern penthouse terrace view" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCw931761jZVq1UwDz2mT-zshTMjC2xU6Mrz3NkOX7jddHvFbrJZ3YRMkJvAkuNz5HutKTBp68HqcueUqMH_lilCN1RzO9sxBpOJ7e8V1ewp8Toth-KQBv3zHwUuZcU5RpbtDIIkKl40Wv577YIjMm9Sp1QB2docYWSp5dWNzsSlLQUVbY1nRKdqiddTXv1s0dADvb_k_-r-Hj51mHiP84UYuZscHm3HjxqNA4JHnoB8vG9ZC2ulDeMB6hkWhRR6b09mcQr-pauXvg')"></div>
+<span class="text-xs font-medium text-slate-500">Penthouse</span>
+</div>
+</div>
+</section>
+<!-- Featured Blueprints -->
+<section class="mb-10">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-2xl font-bold tracking-tight">Featured Blueprints</h2>
+<a class="text-primary text-sm font-semibold flex items-center gap-1" href="#">
+                    View All <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="flex overflow-x-auto hide-scrollbar gap-6 pb-4">
+<!-- Card 1 -->
+<div class="flex-none w-[280px] group">
+<div class="relative aspect-[4/3] rounded-xl overflow-hidden mb-4 shadow-lg ring-1 ring-slate-200 dark:ring-border-dark">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Modern glass pavilion architectural render" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAXOB50xnSJo0w7qcK4QiMqtR3C6Vr5Pn50A_-0iYkS3dGkguFM2yixUauBQ4bBSEFGl-wJBFi1jDjGH3xHV-UoFq4wDhF24luv-z1p-Z-eO3coyX1DvoKu1blbk9dDiKIxzSCkeSrmiYTPDzmuWZo6ase_XQPEBvhVEBmnFNSDuLuYQBr6d2z5hA0gWrWyMZRcgNa23SdGxihxPp45kRA1Lr05P2crrR12DGp625x1zS3mFJmacmE18MdtIJtNIjKuJ8kyrspxbI8')"></div>
+<div class="absolute top-3 right-3 bg-white/90 dark:bg-background-dark/90 backdrop-blur px-2 py-1 rounded-lg text-xs font-bold text-primary">BESTSELLER</div>
+<button class="absolute bottom-3 right-3 w-10 h-10 bg-white dark:bg-surface-dark rounded-full shadow-lg flex items-center justify-center text-slate-900 dark:text-slate-100 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div>
+<h3 class="text-lg font-bold group-hover:text-primary transition-colors">The Glass Pavilion</h3>
+<p class="text-slate-500 text-sm mb-2">by ArchStudio Designers</p>
+<div class="flex items-center justify-between">
+<span class="text-xl font-bold text-slate-900 dark:text-slate-100">$499.00</span>
+<div class="flex items-center text-amber-500 text-xs font-bold gap-1">
+<span class="material-symbols-outlined text-sm fill-1">star</span> 4.9
+                            </div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex-none w-[280px] group">
+<div class="relative aspect-[4/3] rounded-xl overflow-hidden mb-4 shadow-lg ring-1 ring-slate-200 dark:ring-border-dark">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Nordic sanctuary minimalist house design" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAS-cKjZrPI4iDl2jFTnx-4_JdVoLselozDTG4gpgs7wzP5xKp4PPS7NxjAYV7K8Xt1nvmXYEcs6w0bS561T1-PiPGx8MIJl41f-4ohVmitk_qwhT5nT0nvCxQ78ek6hKJVPLaGSL5hMp06bFMPz-_seaS6x-XRejenYCR591Xti9K4r6vDZiT3MZWUyrStoGAGcq06gggAA_hjrPnpDs9xopyQGzeMlKox5an8wj-kCWprb16T9bb7L-2nWkxPqGCHmGKqmxwcHvg')"></div>
+<button class="absolute bottom-3 right-3 w-10 h-10 bg-white dark:bg-surface-dark rounded-full shadow-lg flex items-center justify-center text-slate-900 dark:text-slate-100 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div>
+<h3 class="text-lg font-bold group-hover:text-primary transition-colors">Nordic Sanctuary</h3>
+<p class="text-slate-500 text-sm mb-2">by Elin Jensen Arch</p>
+<div class="flex items-center justify-between">
+<span class="text-xl font-bold text-slate-900 dark:text-slate-100">$350.00</span>
+<div class="flex items-center text-amber-500 text-xs font-bold gap-1">
+<span class="material-symbols-outlined text-sm fill-1">star</span> 4.8
+                            </div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex-none w-[280px] group">
+<div class="relative aspect-[4/3] rounded-xl overflow-hidden mb-4 shadow-lg ring-1 ring-slate-200 dark:ring-border-dark">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Monolith estate brutalist architecture design" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDO30PFIHNctWDBp_qlY35xILwukcYxpCU-YXdseqMtcfiSxAM1g7c8vRuUIsnI002ONvt_d9Dxr1tVnYuBuAjFtUPQiXRt87JoAl1ITfRc7t_uy03gUJEibjifePC2FTkJ1rMtJ5oWTbl1wDWA5hiv_YjGGqgywx6f5cBmHyO0G2JjdH4_qrhJG3Bqkaij0OKQiaw6wuCOXGoubXfczH7mfMcBA0LbFhhSqC4-qha6UTmrtWnNt2G0XMiLOppfD54VhKMCLVPylJI')"></div>
+<button class="absolute bottom-3 right-3 w-10 h-10 bg-white dark:bg-surface-dark rounded-full shadow-lg flex items-center justify-center text-slate-900 dark:text-slate-100 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div>
+<h3 class="text-lg font-bold group-hover:text-primary transition-colors">Monolith Estate</h3>
+<p class="text-slate-500 text-sm mb-2">by Marco Rossi Labs</p>
+<div class="flex items-center justify-between">
+<span class="text-xl font-bold text-slate-900 dark:text-slate-100">$620.00</span>
+<div class="flex items-center text-amber-500 text-xs font-bold gap-1">
+<span class="material-symbols-outlined text-sm fill-1">star</span> 5.0
+                            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Market Trends -->
+<section class="mb-10">
+<h2 class="text-2xl font-bold tracking-tight mb-6">Market Trends</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex items-center gap-4 p-4 bg-white dark:bg-surface-dark rounded-xl ring-1 ring-slate-200 dark:ring-border-dark hover:shadow-md transition-shadow">
+<div class="w-20 h-20 rounded-lg bg-cover bg-center shrink-0" data-alt="Brutalist concrete building details" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB0Y9J07ecWHGUp2rCEN-BvwxdOIeGJ_ETkyTVddrjY0afcz6fy7C1dkuViT6V3EViyUVwqR21g4URtUEXSuQBpSoiw9CVwNORwBL_KOf33rX1FtNJjsg-K-0H2EJ6gmWUEEEha8ROorSa68DM_fSnwJmh_ZQAL6kxRbbOMJR-H3-GnIt6JewVXyjdMPIV9i9vpcj1AC0S_hQnlAJmB0EzALh3XqgJYSkIGsDMx96NvLPaxir7ra28mRJz95kkmd4-x5eaKL9sUyEQ')"></div>
+<div class="flex-1">
+<h4 class="font-bold text-slate-900 dark:text-slate-100">Brutalist Comeback</h4>
+<p class="text-xs text-slate-500 mb-2">Rising demand for raw concrete textures in residential units.</p>
+<span class="text-primary text-xs font-bold">+12.4% MoM</span>
+</div>
+</div>
+<div class="flex items-center gap-4 p-4 bg-white dark:bg-surface-dark rounded-xl ring-1 ring-slate-200 dark:ring-border-dark hover:shadow-md transition-shadow">
+<div class="w-20 h-20 rounded-lg bg-cover bg-center shrink-0" data-alt="Sustainable green roof architecture" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCh7bf7iEqbXooms-_h2buDXdOHPiqpikFCft-PepQIU65nNvzTGDTcrze1ejbbMDoalUv7zrf4LdDJXCU0uxg34e3lrR-7_7fROv3BGq9BIEHjH4riC4XcJlGlYZbmEYe38j4s0NNNjNIr1JrXtyTDN2f6H62tA56tesrUMSAXXwr3-d98jtqJb0RuAy7tDN1ge1642uF1GDybBwlN_QCESNcyBKL9UV9PLz5kskojCBawBaRlh3vRhPG11Fy-tPcX3p3pxNFeihw')"></div>
+<div class="flex-1">
+<h4 class="font-bold text-slate-900 dark:text-slate-100">Sustainable Roofs</h4>
+<p class="text-xs text-slate-500 mb-2">Eco-friendly templates are fetching premium prices.</p>
+<span class="text-primary text-xs font-bold">+8.7% MoM</span>
+</div>
+</div>
+</div>
+</section>
+<!-- New Arrivals List -->
+<section class="mb-6">
+<h2 class="text-2xl font-bold tracking-tight mb-6">New Arrivals</h2>
+<div class="space-y-6">
+<div class="flex gap-4 items-start">
+<div class="w-24 h-24 rounded-xl bg-cover bg-center" data-alt="Modern house interior living room" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDNnwh4M6Vg3V50dMKb10biFryn2sAL6NGrPh7VHmK5E7NFpEpfhM_UI5eKy2otqoGvI8wPI9_qiqsSKQWQL-Q8rNqomoW_n1FUFMuviiZF43FS7GCCOn9Ocw7soR1GJGJu9Imp4LNFjCR2GbUiXsxiBkr1dF-ztlmr7NIoc6yTV7ugcSUR05nscvohDGpek5Jf_omdP_eDr_ivxFTLwcMBEVOs03H0Iq5RekxgsI9ZHbke019JtzdUiryEAhgZJO62VQAg3H_NZx8')"></div>
+<div class="flex-1 border-b border-slate-200 dark:border-border-dark pb-6">
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-bold">Horizon Villa Pro</h4>
+<span class="text-primary font-bold">$299</span>
+</div>
+<p class="text-sm text-slate-500 mb-2 leading-tight">Complete CAD &amp; BIM files with interior lighting maps included.</p>
+<div class="flex gap-4">
+<span class="text-[10px] uppercase font-bold text-slate-400">CAD</span>
+<span class="text-[10px] uppercase font-bold text-slate-400">BIM</span>
+<span class="text-[10px] uppercase font-bold text-slate-400">3DS MAX</span>
+</div>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="w-24 h-24 rounded-xl bg-cover bg-center" data-alt="Luxury estate exterior evening lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD1mJPDoSOmEVp6QBBzFsihiHVvlyn7pvWHa0rMr_6hNw_h1BXGDEZgOcnN2NCJDDZe-yIbhxlAkZb4vUB7H84c-AS8eL5VE5FwLBgKAxUbpTFu8u2D3RnoP5cqDpWYs80GEkWRfRVxSK_elaqMmGvPKDMRCXO4AlTt2PrRldyBL-b9SB4cmx0SnoCrjBfMazTsD4iPCh93GDjlg2bzgS3W1R8Xan1W-y0VuqMQispaRUvRhDkgBXxg4Ud4IysXu4qTpo_wRmx9H3w')"></div>
+<div class="flex-1 border-b border-slate-200 dark:border-border-dark pb-6">
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-bold">Desert Mirage Estate</h4>
+<span class="text-primary font-bold">$540</span>
+</div>
+<p class="text-sm text-slate-500 mb-2 leading-tight">Arid climate sustainable housing with water recycling systems.</p>
+<div class="flex gap-4">
+<span class="text-[10px] uppercase font-bold text-slate-400">REVIT</span>
+<span class="text-[10px] uppercase font-bold text-slate-400">LUMION</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white/90 dark:bg-background-dark/95 backdrop-blur-xl border-t border-slate-200 dark:border-border-dark px-2 pb-8 pt-3 z-50">
+<div class="flex items-center justify-around max-w-lg mx-auto">
+<a class="flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">home</span>
+<span class="text-[10px] font-semibold text-slate-400 group-hover:text-primary uppercase tracking-tighter">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-primary fill-1">storefront</span>
+<span class="text-[10px] font-semibold text-primary uppercase tracking-tighter">Market</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">auto_awesome</span>
+<span class="text-[10px] font-semibold text-slate-400 group-hover:text-primary uppercase tracking-tighter">AI Tools</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">folder_open</span>
+<span class="text-[10px] font-semibold text-slate-400 group-hover:text-primary uppercase tracking-tighter">Projects</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">account_circle</span>
+<span class="text-[10px] font-semibold text-slate-400 group-hover:text-primary uppercase tracking-tighter">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

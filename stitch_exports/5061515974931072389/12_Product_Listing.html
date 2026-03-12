@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BuildVerse | Architectural Materials</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2463eb",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen pb-24">
+<!-- Header / Search -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center p-4 justify-between max-w-5xl mx-auto">
+<div class="flex items-center gap-3">
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl">architecture</span>
+</div>
+<h1 class="text-slate-900 dark:text-slate-100 text-xl font-bold tracking-tight">BuildVerse</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex size-10 items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="flex size-10 items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-5xl mx-auto px-4">
+<!-- Page Title & Filters -->
+<div class="py-6">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-4">Architectural Materials</h2>
+<div class="flex gap-3 overflow-x-auto no-scrollbar pb-2">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-primary text-white px-4">
+<span class="text-sm font-semibold">All Materials</span>
+<span class="material-symbols-outlined text-lg">expand_more</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-4">
+<span class="text-sm font-medium">Natural Stone</span>
+<span class="material-symbols-outlined text-lg">expand_more</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-4">
+<span class="text-sm font-medium">Sustainable Timber</span>
+<span class="material-symbols-outlined text-lg">expand_more</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-4">
+<span class="text-sm font-medium">Structural Glass</span>
+<span class="material-symbols-outlined text-lg">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Material Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 pb-8">
+<!-- Product Card 1 -->
+<div class="flex flex-col overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 shadow-sm">
+<div class="relative w-full aspect-[16/9] bg-center bg-no-repeat bg-cover" data-alt="High-end white Italian Carrara marble texture" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuATyfhmupgHbQShqrcnAQQU0HS1djXTGXMZiOod0KFa7-Bvi0wk0v13S9gkP_EoQx1JXL81y0EfIEp2OioxBCc-d6_BeRA9FR41VRYwJcB559PDXoh6lcGn-ZzhM-b3PZbZx09CDG6U6k6DOUeM4OuX_vwCvC2rlz2cz6YlS_DoMhFT0cKvH8HBEsp7vdchupdjig62tP_Ry27UXbNXniYV31rpychSAn1IHmWEEUfW3VSWskdbkRJArgtIFaODlGVxZBgpfZO09gQ')">
+<div class="absolute top-3 right-3 bg-white/90 dark:bg-background-dark/90 backdrop-blur px-2 py-1 rounded-lg text-xs font-bold text-primary">PREMIUM</div>
+</div>
+<div class="flex flex-col p-5 gap-3">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-xs uppercase tracking-widest text-slate-500 dark:text-slate-400 font-bold mb-1">Stone &amp; Masonry</p>
+<h3 class="text-lg font-bold text-slate-900 dark:text-slate-100">Premium Carrara Marble</h3>
+</div>
+<div class="flex items-center gap-1 text-amber-500">
+<span class="material-symbols-outlined fill-1 text-sm">star</span>
+<span class="text-sm font-bold">4.9</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<p class="text-primary text-xl font-bold">$45.00 <span class="text-sm font-normal text-slate-500">/ sq ft</span></p>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Ships from Italy • 120 reviews</p>
+</div>
+<button class="flex items-center justify-center rounded-xl h-10 px-5 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20 hover:bg-primary/90">
+                            View Specs
+                        </button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="flex flex-col overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 shadow-sm">
+<div class="relative w-full aspect-[16/9] bg-center bg-no-repeat bg-cover" data-alt="Handcrafted sustainable white oak wood planks" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuATouBvkZlOhoQf5g_IVzLnW5DGNPE-610XW0NoCnb-yurRT4oAQ6wIxYRiNvtvI-vPY2ARaYs5MqcKPkP4hsEgo9wjIOPIXFgQMdhEuNNgjbKqxPhlJEejQwCzBjodPYkLdtcuYMdDE4nb30YBpe2uN4wtIOt5mDISunzrYcMESYLBktRXzrYzLAC4odzl4PIxnBNx3pdBCK95rcCb0GqtBBh8Vb9ARewva7Pu9Klq8R4G4U9bsTi7xUuQPbqtZdPhrJQtEqvyH-E')">
+<div class="absolute top-3 right-3 bg-green-500 text-white px-2 py-1 rounded-lg text-xs font-bold">ECO-FRIENDLY</div>
+</div>
+<div class="flex flex-col p-5 gap-3">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-xs uppercase tracking-widest text-slate-500 dark:text-slate-400 font-bold mb-1">Flooring &amp; Timber</p>
+<h3 class="text-lg font-bold text-slate-900 dark:text-slate-100">Sustainable Oak Planking</h3>
+</div>
+<div class="flex items-center gap-1 text-amber-500">
+<span class="material-symbols-outlined fill-1 text-sm">star</span>
+<span class="text-sm font-bold">4.8</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<p class="text-primary text-xl font-bold">$12.50 <span class="text-sm font-normal text-slate-500">/ sq ft</span></p>
+<p class="text-slate-500 dark:text-slate-400 text-xs">FSC Certified • 85 reviews</p>
+</div>
+<button class="flex items-center justify-center rounded-xl h-10 px-5 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20 hover:bg-primary/90">
+                            View Specs
+                        </button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="flex flex-col overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 shadow-sm">
+<div class="relative w-full aspect-[16/9] bg-center bg-no-repeat bg-cover" data-alt="Modern geometric architectural metal mesh panel" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCw2ezoPucI0fzMZNByXihBxMYwa9H4lypU6B-Uo8oyBb_5qGP2i1Z0ZoyqtcvXb6LZ5ErvK5oL9e9IfjvUWkJOoWyiQ3v1K7h1NHdZP8fUjLWU7YHnFc1VoWEzrrlJGQZxv8sODd9gvby36AW1n4XHiZLplHg6kk-GRSVxIXWppRwwrXZ4AGEA7HhFVM2Kw-t8nrHxb9X10p8co5_sQzoOOeMOs_5JnJxuvFZ7qcQlewKvNBVBGSyLF_z_PeIC-z7QdRrVBXNm5d4')">
+</div>
+<div class="flex flex-col p-5 gap-3">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-xs uppercase tracking-widest text-slate-500 dark:text-slate-400 font-bold mb-1">Facade &amp; Metal</p>
+<h3 class="text-lg font-bold text-slate-900 dark:text-slate-100">Brushed Aluminum Mesh</h3>
+</div>
+<div class="flex items-center gap-1 text-amber-500">
+<span class="material-symbols-outlined fill-1 text-sm">star</span>
+<span class="text-sm font-bold">4.7</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<p class="text-primary text-xl font-bold">$32.00 <span class="text-sm font-normal text-slate-500">/ sq ft</span></p>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Grade A-606 • 42 reviews</p>
+</div>
+<button class="flex items-center justify-center rounded-xl h-10 px-5 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20 hover:bg-primary/90">
+                            View Specs
+                        </button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="flex flex-col overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 shadow-sm">
+<div class="relative w-full aspect-[16/9] bg-center bg-no-repeat bg-cover" data-alt="Micro-cement polished concrete floor finish" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBEDpYGGg8swh6yLha_WD4RXF5EgiPgqWEDt33HFw4_4Ppgs-2d3N_8iTlYsrGozFKDLypudO2hsNH7ehDy0NMCNrNUnMK-gaCAOsJ9CSUWs9usuxKRFy7fuAxg_ciS0P5jsyhhrmKhVXuA2nzuJdgkt2wqkNQ4pw-xAwU3xZeIhwcK4qXxIduvkOJw1h4TnQL6kpAEGBoPiLJO6VYPE43TII8vDkV2jWrgSWEIeeEm9akn9kKdWHtLYZ9hmx_VIxYF-MwpN6P-gGw')">
+</div>
+<div class="flex flex-col p-5 gap-3">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-xs uppercase tracking-widest text-slate-500 dark:text-slate-400 font-bold mb-1">Industrial &amp; Finishes</p>
+<h3 class="text-lg font-bold text-slate-900 dark:text-slate-100">Architectural Micro-Cement</h3>
+</div>
+<div class="flex items-center gap-1 text-amber-500">
+<span class="material-symbols-outlined fill-1 text-sm">star</span>
+<span class="text-sm font-bold">4.9</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<p class="text-primary text-xl font-bold">$18.75 <span class="text-sm font-normal text-slate-500">/ sq ft</span></p>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Seamless finish • 210 reviews</p>
+</div>
+<button class="flex items-center justify-center rounded-xl h-10 px-5 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20 hover:bg-primary/90">
+                            View Specs
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-background-light dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 pb-safe">
+<div class="flex items-center justify-around h-16 max-w-lg mx-auto px-4">
+<a class="flex flex-col items-center justify-center gap-0.5 text-slate-500 dark:text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-0.5 text-primary" href="#">
+<span class="material-symbols-outlined text-2xl fill-1">storefront</span>
+<span class="text-[10px] font-bold">Market</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-0.5 text-slate-500 dark:text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">magic_button</span>
+<span class="text-[10px] font-medium">AI Tools</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-0.5 text-slate-500 dark:text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">corporate_fare</span>
+<span class="text-[10px] font-medium">Projects</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-0.5 text-slate-500 dark:text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">account_circle</span>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</div>
+</nav>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .fill-1 {
+            font-variation-settings: 'FILL' 1;
+        }
+        .pb-safe {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+    </style>
+</body></html>

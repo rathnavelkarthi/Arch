@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2463eb",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>BuildVerse | Sky Tower Project</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header / Top Bar -->
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-md mx-auto flex items-center justify-between p-4">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<div class="flex flex-col items-center">
+<h1 class="text-sm font-semibold tracking-tight">Sky Tower Residency</h1>
+<span class="text-[10px] uppercase tracking-widest text-slate-500 dark:text-slate-400 font-bold">Phase 2: Structural</span>
+</div>
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 max-w-md mx-auto w-full pb-24">
+<!-- Hero Section -->
+<section class="p-4">
+<div class="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg group">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+<img alt="Modern skyscraper construction site" class="w-full h-full object-cover" data-alt="Modern skyscraper under construction with cranes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAApo3kqri8tiZDR7ImW64vHgt-zDy7aDRnOk_DUgyc3Ip8XfpLah-ujP0pJNoAZz-Bml3-so5VIsQEHL2FZVs06344R1qTSp4XX0rZKpGVMm8NJ-AHHDWUXI3DZDZwZAuOHbApDx_GV8TfjkSGxFDglstchYtDH8-D4ha8zCCQ_lmeGVtCAdXjeUjuU3v8I2VLsWgfJsth4dTU2RNry9fw9UFA_RICmcOi2cxJAdNOVoEgYl5IJE-sQgPNlfI6WLKAHluZE73LVq8"/>
+<div class="absolute bottom-4 left-4 z-20">
+<span class="bg-primary text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase mb-2 inline-block">Live Feed</span>
+<h2 class="text-white text-xl font-bold">Structural Framework</h2>
+</div>
+<button class="absolute top-4 right-4 z-20 bg-white/20 backdrop-blur-md p-2 rounded-full text-white">
+<span class="material-symbols-outlined text-lg">fullscreen</span>
+</button>
+</div>
+</section>
+<!-- Progress Overview -->
+<section class="px-4 py-2">
+<div class="bg-white dark:bg-slate-900/50 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-end mb-4">
+<div>
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">Overall Progress</p>
+<h3 class="text-3xl font-bold text-primary">68%</h3>
+</div>
+<div class="text-right">
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400">Est. Completion</p>
+<p class="text-sm font-semibold">Oct 24, 2024</p>
+</div>
+</div>
+<div class="w-full h-3 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 68%;"></div>
+</div>
+<div class="mt-4 flex items-center gap-2 text-emerald-600 dark:text-emerald-400">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+<p class="text-xs font-medium">On track: +2 days ahead of schedule</p>
+</div>
+</div>
+</section>
+<!-- Quick Actions / Floorplans & Materials -->
+<section class="p-4 grid grid-cols-2 gap-3">
+<div class="bg-primary/10 dark:bg-primary/20 p-4 rounded-xl border border-primary/20 flex flex-col items-center text-center cursor-pointer active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-primary mb-2 text-3xl">architecture</span>
+<span class="text-sm font-bold text-primary">Floorplans</span>
+<span class="text-[10px] text-primary/70">12 Files Updated</span>
+</div>
+<div class="bg-slate-900 dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center text-center text-white cursor-pointer active:scale-95 transition-transform">
+<span class="material-symbols-outlined mb-2 text-3xl">precision_manufacturing</span>
+<span class="text-sm font-bold">Materials</span>
+<span class="text-[10px] text-slate-400">Inventory Sync</span>
+</div>
+</section>
+<!-- Team Section -->
+<section class="p-4">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-bold text-lg">Active Team</h3>
+<button class="text-primary text-xs font-bold uppercase tracking-wider">Manage</button>
+</div>
+<div class="flex gap-4 overflow-x-auto pb-2 no-scrollbar">
+<!-- Team Member -->
+<div class="flex flex-col items-center shrink-0">
+<div class="size-14 rounded-full border-2 border-primary p-0.5 mb-2 relative">
+<img alt="Profile of Lead Architect" class="rounded-full w-full h-full object-cover" data-alt="Professional headshot of a lead architect" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdp_kc5tOwTFoi2X-fskPmCEkEjhcNAVsowKQuOQtnfhhKkAXeUYxRGzsOZWpKM-G9lWJISh1HZq-OjUc_sR8NZe1D4uIzUc5YgxDzQQ6WtvS6qhZXN-hFH2q9Dy81rJ0lv4jsRZx3HcS76rlJGe8pbSdzNeFEp2BHV491F1qF-Ae4Q7Q2PTSh59XKOHvZRz7bCX8HhMAhsFOS-VZtKUIwnASmQUd8oNwVYJwIEL7aspcWb_AGSP8IyppBO5H89Sar728aXTCfBqM"/>
+<div class="absolute bottom-0 right-0 size-4 bg-emerald-500 rounded-full border-2 border-white dark:border-background-dark"></div>
+</div>
+<p class="text-[11px] font-bold">Sarah L.</p>
+<p class="text-[9px] text-slate-500">Architect</p>
+</div>
+<!-- Team Member -->
+<div class="flex flex-col items-center shrink-0">
+<div class="size-14 rounded-full border-2 border-transparent p-0.5 mb-2 relative">
+<img alt="Profile of Site Manager" class="rounded-full w-full h-full object-cover" data-alt="Professional headshot of a site manager" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP4alizkjj_oZ0Q8lPhpqXrGiJtT_ZNTQdvmAyPRFLDf_xLamt3IvcnLFBf5Hz2yuri-DHRf1HCSkqYT2EhuJltOG-bjC5J7hMghyc4wf2ApIGLKMG87nYg830w8xtsgusZQEnyF63MmsEoNWEQUgma4aQR35GE_5J9mWO_3BQU_qvhZOvVLJMYFqZHs8SYVA40eKFGAhYinidA2cmeukQzUSP2SsOt76T_4UOhtmJJOjkAasDXYyKywcsLIkzwr7ikyJARSLOJgY"/>
+</div>
+<p class="text-[11px] font-bold">Marcus T.</p>
+<p class="text-[9px] text-slate-500">Site Mgr.</p>
+</div>
+<!-- Team Member -->
+<div class="flex flex-col items-center shrink-0">
+<div class="size-14 rounded-full border-2 border-transparent p-0.5 mb-2 relative">
+<img alt="Profile of Structural Engineer" class="rounded-full w-full h-full object-cover" data-alt="Professional headshot of a structural engineer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC16uaErlOIzm_LiQVEBpDb-725enKIE3kSscK1Ec4ekaIKSguGFW1LeRWRsRWVKZ_uvuijQZRkA3xQL0plKDq0-sJ5FJCX1uX9Q_9nWxr3BVBnVDwCMo9ZuCzLbjkw5B6RjnAvfYbivW5VseA-Hpc203vNxcc1eV4NG67ddQ8aidPMtwnxx4z9_TPLnc-5sCZKKQm28betaZQVpyiWpOR_t1Jqu0opXLspbRG0qglqUusAjWvc-OLWiX6lJMOgMIXEDX-5V0UvsGU"/>
+</div>
+<p class="text-[11px] font-bold">Elena R.</p>
+<p class="text-[9px] text-slate-500">Engineer</p>
+</div>
+<!-- Add New -->
+<div class="flex flex-col items-center shrink-0">
+<button class="size-14 rounded-full border-2 border-dashed border-slate-300 dark:border-slate-700 flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-slate-400">add</span>
+</button>
+<p class="text-[11px] font-bold text-slate-400">Invite</p>
+</div>
+</div>
+</section>
+<!-- Timeline / Recent Tasks -->
+<section class="p-4">
+<h3 class="font-bold text-lg mb-4">Milestone Timeline</h3>
+<div class="space-y-4">
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="size-3 bg-emerald-500 rounded-full mt-1.5 ring-4 ring-emerald-500/20"></div>
+<div class="w-0.5 h-full bg-slate-200 dark:bg-slate-800 my-1"></div>
+</div>
+<div class="pb-4">
+<p class="text-xs font-bold text-emerald-500 uppercase tracking-tighter">Completed</p>
+<h4 class="text-sm font-bold">Foundation Piling</h4>
+<p class="text-xs text-slate-500">Verified by inspector on Aug 12</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="size-3 bg-primary rounded-full mt-1.5 ring-4 ring-primary/20"></div>
+<div class="w-0.5 h-full bg-slate-200 dark:bg-slate-800 my-1"></div>
+</div>
+<div class="pb-4">
+<p class="text-xs font-bold text-primary uppercase tracking-tighter">In Progress</p>
+<h4 class="text-sm font-bold">Steel Frame Assembly (Lvl 14-18)</h4>
+<p class="text-xs text-slate-500">ETA: Sept 30, 2024</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="size-3 bg-slate-300 dark:bg-slate-700 rounded-full mt-1.5"></div>
+</div>
+<div class="pb-4">
+<p class="text-xs font-bold text-slate-400 uppercase tracking-tighter">Upcoming</p>
+<h4 class="text-sm font-bold text-slate-400">Exterior Glass Cladding</h4>
+<p class="text-xs text-slate-500">Scheduled for Oct 2024</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 z-50">
+<div class="max-w-md mx-auto flex items-center justify-between px-2 py-3">
+<a class="flex flex-1 flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-medium">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<p class="text-[10px] font-medium">Marketplace</p>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">smart_toy</span>
+<p class="text-[10px] font-medium">AI Tools</p>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dataset</span>
+<p class="text-[10px] font-bold">Projects</p>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<p class="text-[10px] font-medium">Profile</p>
+</a>
+</div>
+</nav>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</body></html>

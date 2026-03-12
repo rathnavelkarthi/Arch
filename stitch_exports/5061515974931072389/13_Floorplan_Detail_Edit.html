@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BuildVerse - Floorplan Editor</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2463eb",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-tab {
+            border-bottom: 2px solid #2463eb;
+            color: #2463eb;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            height: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 10px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header / Top Bar -->
+<header class="flex items-center justify-between p-4 bg-background-light dark:bg-background-dark border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<button class="flex items-center justify-center size-10 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<div>
+<h1 class="text-lg font-bold leading-tight">Modern Villa - Floor 01</h1>
+<p class="text-xs text-slate-500 dark:text-slate-400">Last edited 2h ago</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center size-10 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">history</span>
+</button>
+<button class="flex items-center justify-center size-10 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors text-primary">
+<span class="material-symbols-outlined">share</span>
+</button>
+<button class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors">
+                Export
+            </button>
+</div>
+</header>
+<!-- Sub-navigation Tabs -->
+<nav class="flex border-b border-slate-200 dark:border-slate-800 bg-background-light dark:bg-background-dark px-4 overflow-x-auto custom-scrollbar">
+<button class="flex items-center gap-2 px-4 py-3 text-sm font-semibold border-b-2 border-primary text-primary whitespace-nowrap">
+<span class="material-symbols-outlined text-[18px]">3d_rotation</span> 3D View
+        </button>
+<button class="flex items-center gap-2 px-4 py-3 text-sm font-medium text-slate-500 dark:text-slate-400 border-b-2 border-transparent hover:text-slate-700 dark:hover:text-slate-200 whitespace-nowrap">
+<span class="material-symbols-outlined text-[18px]">architecture</span> 2D Blueprint
+        </button>
+<button class="flex items-center gap-2 px-4 py-3 text-sm font-medium text-slate-500 dark:text-slate-400 border-b-2 border-transparent hover:text-slate-700 dark:hover:text-slate-200 whitespace-nowrap">
+<span class="material-symbols-outlined text-[18px]">texture</span> Materials
+        </button>
+<button class="flex items-center gap-2 px-4 py-3 text-sm font-medium text-slate-500 dark:text-slate-400 border-b-2 border-transparent hover:text-slate-700 dark:hover:text-slate-200 whitespace-nowrap">
+<span class="material-symbols-outlined text-[18px]">bolt</span> Electrical
+        </button>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 relative overflow-hidden flex flex-col md:flex-row">
+<!-- Interactive 3D Canvas Area -->
+<div class="flex-1 relative bg-slate-200 dark:bg-[#0d111a] flex items-center justify-center">
+<!-- Simulated 3D Model Image -->
+<div class="relative w-full h-full max-w-5xl aspect-video md:aspect-auto">
+<img alt="3D Floorplan view" class="w-full h-full object-cover opacity-80 mix-blend-luminosity dark:mix-blend-normal" data-alt="Photorealistic 3D architectural floorplan view of a modern apartment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvhI9s-m_QqDISDpHIYhgMrB1V_kIBl4ucOoUaLGMzoIheZc1R0NUJHrLtVUHPdkTys1eCV9c65IKUDUUp9M_p1YX1-EboTF8gpR2Nuq8w2lENieB30WbosLfz0Q6B7_WaCsQRIHmWWsr3797Su780Oy3stydw8-w2-Ak7rkhg6BV9LBeMMplF5OcVbamz6fya-RJVOhdUNayC5pBUVPUWDIC99nTdndc3Kkl9MQm8eR6zCgjp4udecUYA8BYfbgceT3UQ9EG-w6E"/>
+<!-- Hotspots -->
+<div class="absolute top-1/3 left-1/4 group">
+<div class="size-6 bg-primary/80 border-2 border-white rounded-full flex items-center justify-center cursor-pointer shadow-lg animate-pulse">
+<span class="size-2 bg-white rounded-full"></span>
+</div>
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-white dark:bg-slate-900 px-3 py-1 rounded shadow-xl text-xs font-bold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+                        Master Bedroom
+                    </div>
+</div>
+<div class="absolute top-1/2 right-1/3 group">
+<div class="size-6 bg-primary/80 border-2 border-white rounded-full flex items-center justify-center cursor-pointer shadow-lg">
+<span class="size-2 bg-white rounded-full"></span>
+</div>
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-white dark:bg-slate-900 px-3 py-1 rounded shadow-xl text-xs font-bold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+                        Kitchen Island (Marble)
+                    </div>
+</div>
+<!-- Floating Controls Overlay -->
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-white/10 backdrop-blur-md p-1.5 rounded-xl border border-white/20">
+<button class="p-2 hover:bg-white/20 rounded-lg text-white">
+<span class="material-symbols-outlined">zoom_in</span>
+</button>
+<button class="p-2 hover:bg-white/20 rounded-lg text-white border-x border-white/10">
+<span class="material-symbols-outlined">videocam</span>
+</button>
+<button class="p-2 hover:bg-white/20 rounded-lg text-white">
+<span class="material-symbols-outlined">view_in_ar</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Sidebar Panel -->
+<aside class="w-full md:w-80 bg-background-light dark:bg-background-dark border-l border-slate-200 dark:border-slate-800 flex flex-col">
+<div class="p-4 border-b border-slate-200 dark:border-slate-800">
+<h3 class="text-sm font-bold uppercase tracking-wider text-slate-400">Layer Properties</h3>
+</div>
+<div class="flex-1 overflow-y-auto p-4 space-y-6">
+<!-- Toggle Switches Section -->
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="text-sm font-medium">Dimensions</span>
+<div class="w-10 h-5 bg-primary rounded-full relative">
+<div class="absolute right-1 top-1 size-3 bg-white rounded-full"></div>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-sm font-medium">Furniture Labels</span>
+<div class="w-10 h-5 bg-slate-300 dark:bg-slate-700 rounded-full relative">
+<div class="absolute left-1 top-1 size-3 bg-white rounded-full"></div>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-sm font-medium">Lighting Shadows</span>
+<div class="w-10 h-5 bg-primary rounded-full relative">
+<div class="absolute right-1 top-1 size-3 bg-white rounded-full"></div>
+</div>
+</div>
+</div>
+<hr class="border-slate-200 dark:border-slate-800"/>
+<!-- Material Selection -->
+<div>
+<h4 class="text-sm font-bold mb-3">Selected: Hardwood Floor</h4>
+<div class="grid grid-cols-2 gap-2">
+<div class="border-2 border-primary rounded-lg p-1 bg-primary/5">
+<div class="aspect-square rounded-md mb-2 bg-cover bg-center" data-alt="Light Oak Wood texture" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBue0mmtwdmMmwsaHH2WoRdHwvOh0cbQgF65NG1MEYg8jrUevORcBek08rfG5JbcFyBqnkSGLzCa1g41a2XkR_syI7X6CUKa123_rXwBiJBgCbNmtQQ_UzGQ-1V03EQbo89BLFmKhBCAd21UlMSA2UqVufWxemzv_w0C4S3ha2-266AJ88CbgFjIZm2dpTnSwSNcR_j_dLZVqwt_VKryqaUyGUg-tpAD8tzxg9i-E2KIQ_mwTAao34MT9m7WmjQCTtNbGO8TVeKG30')"></div>
+<p class="text-[10px] font-bold text-center">Light Oak</p>
+</div>
+<div class="border border-slate-200 dark:border-slate-800 rounded-lg p-1 hover:border-primary/50 cursor-pointer transition-colors">
+<div class="aspect-square rounded-md mb-2 bg-cover bg-center" data-alt="Dark Walnut Wood texture" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuASFxuS_0__SFs1T-O0eCcsP82ST13WpQuVEepcJa5-OB7OPWsngzEPfzmozxCdJa4X_w9HTWgpAO2CJdO6c-w8EcXGnKuUNcU2KRs2qhRJafo0tPm_vWdaLRqequTOTHZxRnqJXac2lpn4w_UnOiZ9bouvIJNbtpWkYDcLNRWUAT_ZR30N0lPN6Wu9SaPGuieC2xI_lmDsJFeJiPjetRrV1e2OpcDd0hyQjF2bTZBDQwQjj5wJanchP3a84aHwJ6JVl3Q_pGHh-mc')"></div>
+<p class="text-[10px] font-medium text-center text-slate-500">Dark Walnut</p>
+</div>
+</div>
+</div>
+<!-- Stats/Dimensions -->
+<div class="bg-slate-100 dark:bg-slate-800/50 p-4 rounded-xl space-y-2">
+<div class="flex justify-between text-xs">
+<span class="text-slate-500">Total Area</span>
+<span class="font-bold">124.5 m²</span>
+</div>
+<div class="flex justify-between text-xs">
+<span class="text-slate-500">Living Space</span>
+<span class="font-bold">82.0 m²</span>
+</div>
+<div class="flex justify-between text-xs">
+<span class="text-slate-500">Efficiency Score</span>
+<span class="text-green-500 font-bold">94%</span>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="p-4 grid grid-cols-2 gap-3">
+<button class="flex items-center justify-center gap-2 py-2.5 rounded-lg border border-slate-200 dark:border-slate-800 text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-sm">undo</span> Undo
+                </button>
+<button class="flex items-center justify-center gap-2 py-2.5 rounded-lg bg-primary/10 text-primary text-sm font-bold hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-sm">magic_button</span> AI Optimize
+                </button>
+</div>
+</aside>
+</main>
+<!-- Filter/Category Chips (Mobile Friendly Scroll) -->
+<div class="flex gap-3 px-4 py-3 overflow-x-auto bg-background-light dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 no-scrollbar">
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-4">
+<span class="material-symbols-outlined text-white text-[18px]">straighten</span>
+<p class="text-white text-sm font-medium">Dimensions</p>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-slate-800 px-4">
+<span class="material-symbols-outlined text-[18px]">label</span>
+<p class="text-sm font-medium">Room Labels</p>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-slate-800 px-4">
+<span class="material-symbols-outlined text-[18px]">water_drop</span>
+<p class="text-sm font-medium">Plumbing</p>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-slate-800 px-4">
+<span class="material-symbols-outlined text-[18px]">heat_pump</span>
+<p class="text-sm font-medium">HVAC</p>
+</div>
+</div>
+<!-- Bottom Navigation Bar -->
+<nav class="sticky bottom-0 w-full border-t border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md px-4 pb-6 pt-2">
+<div class="flex justify-between items-end max-w-2xl mx-auto">
+<a class="flex flex-1 flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Market</p>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">auto_awesome</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">AI Tools</p>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">folder</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Projects</p>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Profile</p>
+</a>
+</div>
+</nav>
+</body></html>

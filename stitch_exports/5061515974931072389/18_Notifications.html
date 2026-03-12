@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BuildVerse - Notifications</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2463eb",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex min-h-screen w-full flex-col max-w-md mx-auto bg-white dark:bg-background-dark shadow-2xl overflow-hidden">
+<header class="sticky top-0 z-10 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center p-4 justify-between">
+<div class="flex items-center gap-3">
+<div class="flex size-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined">settings</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight">Activity</h1>
+</div>
+<div class="flex items-center">
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">done_all</span>
+</button>
+</div>
+</div>
+<div class="px-4 overflow-x-auto">
+<div class="flex gap-6">
+<a class="flex flex-col items-center justify-center border-b-2 border-primary text-primary pb-3 pt-2" href="#">
+<span class="text-sm font-bold">All</span>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 dark:text-slate-400 pb-3 pt-2 hover:text-slate-900 dark:hover:text-slate-100" href="#">
+<span class="text-sm font-bold">Messages</span>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 dark:text-slate-400 pb-3 pt-2 hover:text-slate-900 dark:hover:text-slate-100" href="#">
+<span class="text-sm font-bold">Milestones</span>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 dark:text-slate-400 pb-3 pt-2 hover:text-slate-900 dark:hover:text-slate-100" href="#">
+<span class="text-sm font-bold">Alerts</span>
+</a>
+</div>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto">
+<div class="px-4 py-4">
+<h2 class="text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-4">Today</h2>
+<div class="space-y-1">
+<div class="flex items-start gap-4 p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors relative group">
+<div class="relative shrink-0">
+<img class="size-12 rounded-full object-cover" data-alt="Profile photo of a smiling male vendor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChnNIRZ2H3y4wjrBAdqdFh7mtthKJa90xDKgFF0xiO8wGt24Q7VOi-yyfrBbbbyQGsJ8xQzKRC-nqWK4_32QtGtR__zvknUnAXrVm6dNQz7SRLVPdb2HAh6OHmLvhUS_HZ9QKDO9FsTFnxhRj5M0Jg7MXKYvPWGu-vdnyxk5yJ0aoKMVbck7Xa0l6x6mGdxfN8NUwuJTKRax91HplFd4CVPHQbOm0JBVNaBb4YlHG_JFJxuUR1pn83FH7todlOzt5uLIcRd-dk4l0"/>
+<div class="absolute -bottom-1 -right-1 size-5 bg-primary border-2 border-white dark:border-background-dark rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-[10px] text-white font-bold">chat</span>
+</div>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<p class="text-sm font-semibold leading-snug">New message from Urban Woods</p>
+<span class="text-[10px] font-medium text-slate-400">2m</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-2 mt-0.5">"We have updated the shipping timeline for the reclaimed oak flooring..."</p>
+</div>
+<div class="size-2 bg-primary rounded-full mt-2 self-start shrink-0"></div>
+</div>
+<div class="flex items-start gap-4 p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<div class="shrink-0 size-12 rounded-xl bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<p class="text-sm font-semibold leading-snug">Milestone Completed</p>
+<span class="text-[10px] font-medium text-slate-400">1h</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-2 mt-0.5">Foundation phase for 'The Glass House' project has been verified.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<div class="shrink-0 size-12 rounded-xl bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 flex items-center justify-center">
+<span class="material-symbols-outlined">auto_awesome</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<p class="text-sm font-semibold leading-snug">AI Design Alert</p>
+<span class="text-[10px] font-medium text-slate-400">3h</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-2 mt-0.5">3 new exterior concepts generated based on your latest moodboard.</p>
+</div>
+</div>
+</div>
+<h2 class="text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500 mt-8 mb-4">Yesterday</h2>
+<div class="space-y-1">
+<div class="flex items-start gap-4 p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<div class="shrink-0 size-12 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 flex items-center justify-center overflow-hidden">
+<img class="size-full object-cover" data-alt="Blue architectural office building" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoaQPzs09q0Im3tP4_9xk7m1pPkrZG8cuyea3cmn47cipXGSFHLIdUyXT5Pgkmwzule0xxUgoiY7wGSsDEfGCbbNvIsC3dvOqftGRN-93NaNJaV8xAnqR6r7Fu81wkq-aBlZ-zNl-W4jkG_aYVFXOYI4HEVIhoeWr5wx2BnDnTmEThswWHz6aa3Vtl_mMmAfeihG5o1pqpttDuClCtVxGFS_fFMIHoQU5EEvDQ4dXsNUdVSs-F_-viGyY2zLdx7hqezGjW5KR_6KM"/>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<p class="text-sm font-semibold leading-snug">Project Update</p>
+<span class="text-[10px] font-medium text-slate-400">1d</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-2 mt-0.5">Skyline Residences blueprint has been updated to v2.4.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<div class="shrink-0 size-12 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-400">person_add</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<p class="text-sm font-semibold leading-snug">New Team Member</p>
+<span class="text-[10px] font-medium text-slate-400">1d</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-2 mt-0.5">Sarah Chen has joined the Modern Villa project as Lead Architect.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<nav class="sticky bottom-0 z-10 bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 px-2 pb-6 pt-2">
+<div class="flex items-center justify-around">
+<a class="flex flex-1 flex-col items-center gap-1 group" href="#">
+<div class="text-slate-400 dark:text-slate-500 group-hover:text-primary transition-colors flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">home</span>
+</div>
+<p class="text-[10px] font-medium text-slate-400 dark:text-slate-500 group-hover:text-primary">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 group" href="#">
+<div class="text-slate-400 dark:text-slate-500 group-hover:text-primary transition-colors flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">storefront</span>
+</div>
+<p class="text-[10px] font-medium text-slate-400 dark:text-slate-500 group-hover:text-primary">Marketplace</p>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 group" href="#">
+<div class="text-slate-400 dark:text-slate-500 group-hover:text-primary transition-colors flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">magic_button</span>
+</div>
+<p class="text-[10px] font-medium text-slate-400 dark:text-slate-500 group-hover:text-primary">AI Tools</p>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 group" href="#">
+<div class="text-slate-400 dark:text-slate-500 group-hover:text-primary transition-colors flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">folder_open</span>
+</div>
+<p class="text-[10px] font-medium text-slate-400 dark:text-slate-500 group-hover:text-primary">Projects</p>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 group" href="#">
+<div class="text-primary flex h-8 items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">account_circle</span>
+</div>
+<p class="text-[10px] font-medium text-primary">Profile</p>
+</a>
+</div>
+</nav>
+</div>
+</body></html>

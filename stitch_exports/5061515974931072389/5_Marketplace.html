@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PropTech Materials Marketplace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a1a1a",
+                        "accent": "#2463eb",
+                        "background-light": "#fcfcfc",
+                        "surface": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: { 
+                        "DEFAULT": "0.5rem", 
+                        "lg": "1rem", 
+                        "xl": "1.5rem", 
+                        "2xl": "2rem",
+                        "full": "9999px" 
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+            background-color: #fcfcfc;
+        }
+        .search-container {
+            background: #f4f4f4;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light font-display text-slate-900 min-h-screen pb-32">
+<!-- Header Section -->
+<header class="sticky top-0 z-50 bg-background-light/90 backdrop-blur-xl">
+<div class="max-w-md mx-auto px-6 pt-6 pb-4 flex items-center justify-between">
+<div>
+<h1 class="text-2xl font-bold tracking-tight">PropStore</h1>
+<p class="text-xs font-medium text-slate-400">Construction &amp; Design</p>
+</div>
+<div class="flex items-center gap-3">
+<button class="w-10 h-10 rounded-full bg-white shadow-soft flex items-center justify-center text-slate-600 border border-slate-100">
+<span class="material-symbols-outlined text-xl">notifications</span>
+</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-white shadow-soft">
+<img alt="Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6WzpMyOOcFO8lB07Xwu-ij3tQv4eipN8iVkP2euMF9_SC6C1BFoxvPukBZV2lVWdZTG_K1vcYMHssn0TTMtD2iX7u-1QnfZOBrpdAMuecjmX9jOeVCheQgPibXo-edDbIswQmjJBuNRTlI0L5yW4em_IewdkamY_cOi9E-HvLSBVRumJKr_Ar1HT9oElId8rsbNL6gJNcWVOuYDP8ObAch5JifwKsu89hCggQGNGu2Ias6YNiK9yo79mrWFUt6045cRdJ0ZFCIxo"/>
+</div>
+</div>
+</div>
+<!-- Search Bar - Breathable Style -->
+<div class="max-w-md mx-auto px-6 pb-6">
+<div class="relative flex items-center gap-3">
+<div class="relative flex-grow">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-slate-400 text-lg">search</span>
+</div>
+<input class="block w-full pl-11 pr-4 py-4 bg-slate-100/80 border-none rounded-2xl text-sm placeholder-slate-400 focus:ring-2 focus:ring-primary/5 transition-all" placeholder="Search materials..." type="text"/>
+</div>
+<button class="w-12 h-12 flex items-center justify-center bg-primary text-white rounded-2xl shadow-lg">
+<span class="material-symbols-outlined text-xl">tune</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-md mx-auto">
+<!-- Categories Section - High End & Breathable -->
+<section class="px-6 py-4">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-lg font-bold">Categories</h2>
+<button class="text-xs font-bold text-slate-400 uppercase tracking-widest">See all</button>
+</div>
+<div class="flex gap-4 overflow-x-auto pb-4 no-scrollbar">
+<div class="flex-shrink-0 flex flex-col items-center gap-3">
+<div class="w-16 h-16 rounded-2xl bg-white shadow-soft border border-slate-50 flex items-center justify-center group cursor-pointer hover:bg-primary hover:text-white transition-all duration-300">
+<span class="material-symbols-outlined text-2xl">grid_view</span>
+</div>
+<span class="text-[11px] font-bold text-slate-500 uppercase tracking-tighter">Tiles</span>
+</div>
+<div class="flex-shrink-0 flex flex-col items-center gap-3">
+<div class="w-16 h-16 rounded-2xl bg-white shadow-soft border border-slate-50 flex items-center justify-center group cursor-pointer hover:bg-primary hover:text-white transition-all duration-300">
+<span class="material-symbols-outlined text-2xl">light</span>
+</div>
+<span class="text-[11px] font-bold text-slate-500 uppercase tracking-tighter">Lights</span>
+</div>
+<div class="flex-shrink-0 flex flex-col items-center gap-3">
+<div class="w-16 h-16 rounded-2xl bg-white shadow-soft border border-slate-50 flex items-center justify-center group cursor-pointer hover:bg-primary hover:text-white transition-all duration-300">
+<span class="material-symbols-outlined text-2xl">window</span>
+</div>
+<span class="text-[11px] font-bold text-slate-500 uppercase tracking-tighter">Windows</span>
+</div>
+<div class="flex-shrink-0 flex flex-col items-center gap-3">
+<div class="w-16 h-16 rounded-2xl bg-white shadow-soft border border-slate-50 flex items-center justify-center group cursor-pointer hover:bg-primary hover:text-white transition-all duration-300">
+<span class="material-symbols-outlined text-2xl">door_front</span>
+</div>
+<span class="text-[11px] font-bold text-slate-500 uppercase tracking-tighter">Doors</span>
+</div>
+<div class="flex-shrink-0 flex flex-col items-center gap-3">
+<div class="w-16 h-16 rounded-2xl bg-white shadow-soft border border-slate-50 flex items-center justify-center group cursor-pointer hover:bg-primary hover:text-white transition-all duration-300">
+<span class="material-symbols-outlined text-2xl">layers</span>
+</div>
+<span class="text-[11px] font-bold text-slate-500 uppercase tracking-tighter">Floor</span>
+</div>
+</div>
+</section>
+<!-- Pro Banner - Minimal & Clean -->
+<section class="px-6 pb-8">
+<div class="relative w-full rounded-2xl overflow-hidden bg-slate-900 p-6 shadow-xl">
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-2">
+<span class="px-2 py-0.5 bg-accent text-[10px] font-black text-white rounded uppercase tracking-widest">Pro</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-1">Elite Membership</h3>
+<p class="text-sm text-slate-400 mb-4">Exclusive 15% off bulk materials</p>
+<button class="bg-white text-primary text-xs font-bold px-5 py-2.5 rounded-xl uppercase tracking-wider shadow-lg">Learn More</button>
+</div>
+<div class="absolute right-[-20px] bottom-[-20px] opacity-10">
+<span class="material-symbols-outlined text-[140px] text-white">architecture</span>
+</div>
+</div>
+</section>
+<!-- Product Grid - Soft Rounded Cards -->
+<section class="px-6">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-lg font-bold">New Arrivals</h2>
+<div class="flex gap-1 bg-slate-100 p-1 rounded-lg">
+<button class="p-1 rounded-md bg-white shadow-sm"><span class="material-symbols-outlined text-sm">grid_view</span></button>
+<button class="p-1 rounded-md"><span class="material-symbols-outlined text-sm text-slate-400">list</span></button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-5">
+<!-- Product Card 1 -->
+<div class="flex flex-col gap-3 group">
+<div class="relative aspect-[4/5] rounded-2xl overflow-hidden bg-slate-100 shadow-soft">
+<img alt="Close up of luxurious white italian marble slab" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD37qVTo2bFIENcxEEUNlek7zZCs8-1AKjAD_ziBYgq082E1jaSb1OrDxVtH_unwh_yWAKJVbBwIofu3tGHfpwkfsgX_9XHzopGYYxOaae1lG1snYI6kD5_yrrut6wmPDkxd8RTzS8y7tLz38e-xf6vcP3B1DXD1qetkS0nNkVz4d3eKYSRDcoBYRucf23xClcHmf_2jCRRkdbqvvUvc-_Qj9jRFzDRbRk0ctoNkapVHFPOBDLbtbq47RIq5KDPq-V8ZhyynX4oF1s"/>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 backdrop-blur shadow-sm flex items-center justify-center text-slate-900">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+</div>
+<div>
+<h3 class="text-sm font-semibold text-slate-800 truncate">Premium Italian Marble</h3>
+<div class="flex items-center justify-between mt-1">
+<span class="text-sm font-bold text-slate-900">$185.00 <span class="text-[10px] text-slate-400 font-medium">/sqm</span></span>
+<div class="w-7 h-7 bg-primary rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xs">add</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="flex flex-col gap-3 group">
+<div class="relative aspect-[4/5] rounded-2xl overflow-hidden bg-slate-100 shadow-soft">
+<img alt="Modern geometric copper light fixture pendant" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbL4HsRwoKvLcf5ITKU_NEH8hczbo6eYYtuar41W8Gqwf7QpP5Lgzb3HwJRxk4neRp8LKiaV58-ENeSLYKBLSXDFOiVa0KtwRohUkSkMXCf9n0Xr15gtnU1IUSB1SxgRXxrG_j8okP2Ut9KFJoKnOlhNKyudIthYwors5-ejcK36DOIUJ6wwxX_aiyKENrERQgh4cIh7MAIYiQ1it7onxSzAQt-vhAScU9t5UrwUA06YzzqLckEKu6agUrK5tS9BUcnRyRf7v0yt4"/>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 backdrop-blur shadow-sm flex items-center justify-center text-slate-900">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 px-2 py-1 bg-white/90 backdrop-blur rounded-lg shadow-sm">
+<div class="flex items-center gap-1 text-[10px] font-bold">
+<span class="material-symbols-outlined text-[10px] text-yellow-500 fill">star</span>
+                            4.8
+                        </div>
+</div>
+</div>
+<div>
+<h3 class="text-sm font-semibold text-slate-800 truncate">Nordic Pendant Lamp</h3>
+<div class="flex items-center justify-between mt-1">
+<span class="text-sm font-bold text-slate-900">$124.50</span>
+<div class="w-7 h-7 bg-primary rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xs">add</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="flex flex-col gap-3 group">
+<div class="relative aspect-[4/5] rounded-2xl overflow-hidden bg-slate-100 shadow-soft">
+<img alt="Natural oak wood flooring planks sample" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyAw-7DYYIqXzX-Gi3RSTKYq4SMhke_faHO3-icHKnkfydjUsDyggoVLNWfMODNeoZy8fRcyVqW3virSZP8WegnqujKqlWGK0F9Kif9UVO2BbofK05QnJnrX365G4XOtjiBltNnQOOPsfQa0pgV_rZmqBA6BkruZ3cij39ipN43qPXXYPire2tLTNSAahiAL4psD_jtbpo3JJlaKPtyAyZdmR4THfDHBAp32PacpIQcu4fTyA2fOfoIR1V5KBDAIPdED2K3jZTXAo"/>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 backdrop-blur shadow-sm flex items-center justify-center text-slate-900">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+</div>
+<div>
+<h3 class="text-sm font-semibold text-slate-800 truncate">Natural Oak Planks</h3>
+<div class="flex items-center justify-between mt-1">
+<span class="text-sm font-bold text-slate-900">$42.00 <span class="text-[10px] text-slate-400 font-medium">/sqft</span></span>
+<div class="w-7 h-7 bg-primary rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xs">add</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="flex flex-col gap-3 group">
+<div class="relative aspect-[4/5] rounded-2xl overflow-hidden bg-slate-100 shadow-soft">
+<img alt="Sleek black aluminum window frame detail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYrkQNc-a1pWd2RENP7aC46kzxypAjT6tHtmxqgh_QIYPBU6NmUKQAKnMe-bzNqFt2sMV68F0cV0fuDpZWkG9OuKFXJjI94PEYgWDz3NxYbZEJyzUEoG0dgnQKLs5P_ev2Yt8vyowptwqjmYkEr6bv19sdDgsI2UtWHLIWyY-_yGEBLA4g4uv3AjQBJMPZ5895ESZ8j6Mp20PeK1lHiwT86KPP6Ebu4R6zzrSIZukMyh33qBDLhvkAIe_IR7uku8CqZnbVxUvmuRw"/>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 backdrop-blur shadow-sm flex items-center justify-center text-slate-900">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+</div>
+<div>
+<h3 class="text-sm font-semibold text-slate-800 truncate">Slimline Window</h3>
+<div class="flex items-center justify-between mt-1">
+<span class="text-sm font-bold text-slate-900">$310.00</span>
+<div class="w-7 h-7 bg-primary rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xs">add</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- High-End Glassmorphism Navigation Bar -->
+<nav class="fixed bottom-6 left-6 right-6 z-50">
+<div class="max-w-md mx-auto bg-white/90 backdrop-blur-2xl border border-slate-200/50 shadow-[0_8px_32px_rgba(0,0,0,0.08)] rounded-[2.5rem] px-4 py-3 flex justify-between items-center"><!-- Home -->
+<a class="flex flex-col items-center gap-1 px-3 py-1 text-slate-400 transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-[22px]">home</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Home</span>
+</a>
+<!-- Marketplace (Active) -->
+<a class="flex flex-col items-center gap-1 px-4 py-2 bg-[#2563EB] text-white rounded-3xl shadow-lg shadow-blue-500/20 transition-all duration-300 transform scale-105" href="#">
+<span class="material-symbols-outlined fill text-[22px]">storefront</span>
+<span class="text-[10px] font-black uppercase tracking-wider">Market</span>
+</a>
+<!-- AI Tools -->
+<a class="flex flex-col items-center gap-1 px-3 py-1 text-slate-400 transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-[22px]">auto_awesome</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">AI Tools</span>
+</a>
+<!-- Projects -->
+<a class="flex flex-col items-center gap-1 px-3 py-1 text-slate-400 transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-[22px]">layers</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Projects</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center gap-1 px-3 py-1 text-slate-400 transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-[22px]">person</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Profile</span>
+</a></div>
+</nav>
+</body></html>

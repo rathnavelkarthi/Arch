@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2463eb",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#0F172A",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .blueprint-grid {
+            background-image: 
+                linear-gradient(to right, rgba(36, 99, 235, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(36, 99, 235, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .glow-button {
+            box-shadow: 0 0 20px rgba(36, 99, 235, 0.4);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen blueprint-grid">
+<!-- Header -->
+<header class="flex items-center justify-between px-6 py-4 border-b border-slate-200 dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md sticky top-0 z-10">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-white">architecture</span>
+</div>
+<h1 class="text-lg font-bold tracking-tight">ArchAI <span class="text-primary">Studio</span></h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-lg transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-slate-300 dark:bg-slate-700 overflow-hidden">
+<img alt="Profile" data-alt="User profile avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAH6RupkGHWsUvscNeFcyNtnnHbWfZovyby2VZc18T2lXn1ARstvZiPSdLzwB0LqGwFpgQ937d26TPIfRVlnPUb5GgpMy6c-Rq8J4LkRB6X0RZt35yxZrHCO6NBbTRDscdKvVZIiesV-kYo6gKAc8HiteSPW_AuZkXHubA4ZDJmSnH_EboiN0GIegLSWmM71laSA1MHudqYVfGjBBbA_5vthV2-g5-HKAJl6Dc8I6sFLgQTAZ9kKlgMK4ibfru40vL3zx3j3V96FtE"/>
+</div>
+</div>
+</header>
+<main class="max-w-5xl mx-auto p-6 space-y-8 pb-32">
+<!-- Main Controls Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left Column: Upload & Config -->
+<div class="lg:col-span-7 space-y-6">
+<section class="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 p-6 rounded-xl shadow-sm">
+<h2 class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-4">1. Source Sketch</h2>
+<div class="group relative flex flex-col items-center justify-center border-2 border-dashed border-slate-300 dark:border-slate-700 hover:border-primary dark:hover:border-primary bg-slate-50 dark:bg-slate-800/30 p-10 rounded-xl transition-all cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">cloud_upload</span>
+</div>
+<h3 class="text-lg font-medium mb-1">Upload Floorplan Sketch</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 text-center max-w-xs">
+                            Drag and drop your hand-drawn sketch or plot map (JPG, PNG or PDF)
+                        </p>
+<button class="mt-6 px-6 py-2 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 rounded-lg text-sm font-semibold transition-colors">
+                            Select File
+                        </button>
+</div>
+</section>
+<section class="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 p-6 rounded-xl shadow-sm space-y-6">
+<h2 class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">2. Specifications</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300">Plot Size (sq. ft.)</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">square_foot</span>
+<input class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg pl-10 focus:ring-primary focus:border-primary" placeholder="e.g. 2400" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300">Number of Floors</label>
+<div class="flex items-center bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg h-[42px] overflow-hidden">
+<button class="flex-1 h-full hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center"><span class="material-symbols-outlined text-sm">remove</span></button>
+<div class="px-6 font-semibold border-x border-slate-200 dark:border-slate-700">2</div>
+<button class="flex-1 h-full hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300">Design Style</label>
+<div class="grid grid-cols-3 gap-1 bg-slate-100 dark:bg-slate-800 p-1 rounded-lg">
+<button class="py-2 text-sm font-medium rounded-md bg-white dark:bg-slate-700 shadow-sm">Modern</button>
+<button class="py-2 text-sm font-medium rounded-md text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100">Brutalist</button>
+<button class="py-2 text-sm font-medium rounded-md text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100">Minimal</button>
+</div>
+</div>
+<button class="w-full py-4 bg-primary hover:bg-primary/90 text-white font-bold rounded-xl flex items-center justify-center gap-2 glow-button transition-all">
+<span class="material-symbols-outlined">auto_awesome</span>
+                        Generate Layouts
+                    </button>
+</section>
+</div>
+<!-- Right Column: Generation Previews -->
+<div class="lg:col-span-5 space-y-4">
+<div class="flex items-center justify-between">
+<h2 class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Generated Ideas</h2>
+<span class="text-xs text-primary font-medium px-2 py-1 bg-primary/10 rounded">3 New Variants</span>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<!-- Preview Card 1 -->
+<div class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden hover:border-primary/50 transition-colors">
+<div class="aspect-video bg-slate-200 dark:bg-slate-800 relative overflow-hidden">
+<div class="absolute inset-0 blueprint-grid opacity-30"></div>
+<img alt="Floorplan Preview" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform" data-alt="Technical architectural floorplan drawing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAswiGuubbqu3b_r7ImHETG151njN6XqAA0def_DRwaCJl-P9i1DssRa2lF99CgeSxS1iebLoFXoSOnWhwuUaKwxHAoNx8xW-3sszSeskRSWuDkoXSwm5GpAjiIEcjKW9F24QGxxVD1-3Dq1hO48KHWue1ln0MITCwyigtnCZXOgMc7dv87tK0fgOMJgdzAurRXBhGDhEuPejNrj7n06UnORFduThuYRwibsXwEOTn3gTkT1PECBIT3shNdZyBHGftfDw28C3ALAv8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-3 left-3 flex items-center gap-2">
+<span class="text-[10px] font-bold bg-primary px-2 py-0.5 rounded text-white uppercase">Variant A</span>
+<span class="text-[10px] font-bold bg-slate-900/80 px-2 py-0.5 rounded text-white uppercase">92% Match</span>
+</div>
+</div>
+<div class="p-4 flex items-center justify-between">
+<div>
+<p class="text-sm font-semibold">Open Plan Concept</p>
+<p class="text-xs text-slate-500">3 Beds • 2 Baths • Terrace</p>
+</div>
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined text-xl">download</span>
+</button>
+</div>
+</div>
+<!-- Preview Card 2 -->
+<div class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden hover:border-primary/50 transition-colors opacity-60 grayscale hover:grayscale-0 transition-all">
+<div class="aspect-video bg-slate-200 dark:bg-slate-800 relative overflow-hidden">
+<div class="absolute inset-0 blueprint-grid opacity-30"></div>
+<img alt="Architecture Preview" class="w-full h-full object-cover opacity-60" data-alt="Modern house architecture 3D render" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3-lAufLAouJs7Hvf975pEohqqEHW_siy2evw1YRkLtH1DDE5wQmLleGYzXsfktKLo0l835FrPBzIR4ofaKhiRiIseoXzvfcdfQdscaKrZi90cfIMky9B7QAPoVrjTT7mEsFSXRDH9PL15Rd0j9y_atNhrHkmoZGiKNPTB6u3H4E39Gt0UJ99BF9FQJPUXWtF7jXfV-mae63LwKkqzxLL3-JXEEagML6vmTL_YhmSD_E23eMXmy4ZZKD4UBfG9ayNg1J4TH-T5BZ0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-3 left-3 flex items-center gap-2">
+<span class="text-[10px] font-bold bg-primary px-2 py-0.5 rounded text-white uppercase">Variant B</span>
+</div>
+</div>
+<div class="p-4 flex items-center justify-between">
+<div>
+<p class="text-sm font-semibold">Minimalist Loft</p>
+<p class="text-xs text-slate-500">2 Beds • 1 Bath • High Ceilings</p>
+</div>
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined text-xl">lock</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800 z-50 px-4 pb-6 pt-3">
+<div class="max-w-md mx-auto flex items-center justify-around">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined font-variation-fill-1">home</span>
+<span class="text-[10px] font-semibold">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">magic_button</span>
+<span class="text-[10px] font-semibold">Generate</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">folder</span>
+<span class="text-[10px] font-semibold">Projects</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-semibold">Settings</span>
+</a>
+</div>
+</nav>
+</body></html>

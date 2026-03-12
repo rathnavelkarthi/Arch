@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BuildVerse - Cost Estimate Breakdown</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2463eb",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#0f172a",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-10 flex items-center bg-white/80 dark:bg-slate-900/80 backdrop-blur-md p-4 border-b border-slate-200 dark:border-slate-800 justify-between">
+<div class="flex items-center gap-3">
+<div class="text-primary cursor-pointer">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</div>
+<div>
+<h1 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight">Project Aurora</h1>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Cost Estimate Breakdown</p>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined">share</span>
+</button>
+<button class="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto pb-24">
+<!-- Summary Cards -->
+<div class="flex flex-wrap gap-4 p-4">
+<div class="flex min-w-[160px] flex-1 flex-col gap-2 rounded-xl p-5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Total Estimate</p>
+<p class="text-slate-900 dark:text-slate-50 text-2xl font-bold tracking-tight">$142,500.00</p>
+<div class="flex items-center gap-1 text-emerald-600 dark:text-emerald-400 text-sm font-semibold">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>+5.2% vs initial</span>
+</div>
+</div>
+<div class="flex min-w-[160px] flex-1 flex-col gap-2 rounded-xl p-5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Profit Margin</p>
+<p class="text-slate-900 dark:text-slate-50 text-2xl font-bold tracking-tight">18.5%</p>
+<div class="flex items-center gap-1 text-rose-600 dark:text-rose-400 text-sm font-semibold">
+<span class="material-symbols-outlined text-sm">trending_down</span>
+<span>-1.2% variance</span>
+</div>
+</div>
+</div>
+<!-- Expense Distribution Chart -->
+<section class="px-4 py-2">
+<div class="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-6">
+<div class="flex justify-between items-center mb-6">
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold">Category Distribution</h2>
+<span class="text-primary text-sm font-semibold cursor-pointer">View Details</span>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-center">
+<div class="relative flex items-center justify-center size-40">
+<!-- Custom CSS Circle Chart Simulation -->
+<div class="absolute inset-0 rounded-full border-[16px] border-slate-100 dark:border-slate-700"></div>
+<div class="absolute inset-0 rounded-full border-[16px] border-primary border-t-transparent border-l-transparent -rotate-45"></div>
+<div class="flex flex-col items-center">
+<span class="text-2xl font-bold text-slate-900 dark:text-white">$142k</span>
+<span class="text-[10px] uppercase tracking-wider text-slate-500">Grand Total</span>
+</div>
+</div>
+<div class="flex-1 w-full space-y-4">
+<div class="space-y-1">
+<div class="flex justify-between text-sm mb-1">
+<span class="text-slate-600 dark:text-slate-400 flex items-center gap-2">
+<span class="size-2 rounded-full bg-primary"></span> Materials
+                                </span>
+<span class="font-semibold text-slate-900 dark:text-slate-100">$68,400 (48%)</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 48%"></div>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between text-sm mb-1">
+<span class="text-slate-600 dark:text-slate-400 flex items-center gap-2">
+<span class="size-2 rounded-full bg-emerald-500"></span> Labor
+                                </span>
+<span class="font-semibold text-slate-900 dark:text-slate-100">$45,600 (32%)</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
+<div class="bg-emerald-500 h-full rounded-full" style="width: 32%"></div>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between text-sm mb-1">
+<span class="text-slate-600 dark:text-slate-400 flex items-center gap-2">
+<span class="size-2 rounded-full bg-amber-500"></span> Overhead
+                                </span>
+<span class="font-semibold text-slate-900 dark:text-slate-100">$28,500 (20%)</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
+<div class="bg-amber-500 h-full rounded-full" style="width: 20%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Detailed Line Items -->
+<section class="px-4 py-6">
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold mb-4">Line Items</h2>
+<div class="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-sm">
+<table class="w-full text-left text-sm">
+<thead class="bg-slate-50 dark:bg-slate-900/50 border-b border-slate-200 dark:border-slate-700">
+<tr>
+<th class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300">Description</th>
+<th class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300">Category</th>
+<th class="px-4 py-3 font-semibold text-slate-700 dark:text-slate-300 text-right">Amount</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-700/50">
+<tr>
+<td class="px-4 py-4">
+<div class="font-medium text-slate-900 dark:text-slate-100">Structural Steel</div>
+<div class="text-xs text-slate-500">Batch #442-A</div>
+</td>
+<td class="px-4 py-4">
+<span class="px-2 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider">Materials</span>
+</td>
+<td class="px-4 py-4 text-right font-semibold">$24,200.00</td>
+</tr>
+<tr>
+<td class="px-4 py-4">
+<div class="font-medium text-slate-900 dark:text-slate-100">On-site Staffing</div>
+<div class="text-xs text-slate-500">Week 12-15 Forecast</div>
+</td>
+<td class="px-4 py-4">
+<span class="px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-[10px] font-bold uppercase tracking-wider">Labor</span>
+</td>
+<td class="px-4 py-4 text-right font-semibold">$12,800.00</td>
+</tr>
+<tr>
+<td class="px-4 py-4">
+<div class="font-medium text-slate-900 dark:text-slate-100">Equipment Rental</div>
+<div class="text-xs text-slate-500">Excavator 300XP</div>
+</td>
+<td class="px-4 py-4">
+<span class="px-2 py-1 rounded-full bg-amber-500/10 text-amber-600 dark:text-amber-400 text-[10px] font-bold uppercase tracking-wider">Overhead</span>
+</td>
+<td class="px-4 py-4 text-right font-semibold">$8,450.00</td>
+</tr>
+<tr>
+<td class="px-4 py-4">
+<div class="font-medium text-slate-900 dark:text-slate-100">Concrete Pouring</div>
+<div class="text-xs text-slate-500">Foundation Stage 2</div>
+</td>
+<td class="px-4 py-4">
+<span class="px-2 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider">Materials</span>
+</td>
+<td class="px-4 py-4 text-right font-semibold">$18,900.00</td>
+</tr>
+<tr>
+<td class="px-4 py-4">
+<div class="font-medium text-slate-900 dark:text-slate-100">HVAC Sub-contract</div>
+<div class="text-xs text-slate-500">Initial Installation</div>
+</td>
+<td class="px-4 py-4">
+<span class="px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-[10px] font-bold uppercase tracking-wider">Labor</span>
+</td>
+<td class="px-4 py-4 text-right font-semibold">$31,200.00</td>
+</tr>
+</tbody>
+</table>
+<div class="p-4 bg-slate-50 dark:bg-slate-900/30 flex justify-center">
+<button class="text-sm font-semibold text-primary hover:underline">View All 42 Items</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-4 pb-6 pt-2 z-20">
+<div class="flex max-w-lg mx-auto gap-1">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-medium leading-normal">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<p class="text-[10px] font-medium leading-normal">Market</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">smart_toy</span>
+<p class="text-[10px] font-medium leading-normal">AI Tools</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">folder</span>
+<p class="text-[10px] font-bold leading-normal">Projects</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<p class="text-[10px] font-medium leading-normal">Profile</p>
+</a>
+</div>
+</nav>
+</body></html>
