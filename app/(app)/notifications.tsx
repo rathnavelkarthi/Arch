@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, ScrollView, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { ArrowLeft, Settings, CheckCircle2, MessageSquare, Sparkles, CheckSquare, UserPlus } from 'lucide-react-native';
+import { ArrowLeft, CheckCircle2, MessageSquare, Sparkles, CheckSquare, UserPlus } from 'lucide-react-native';
 import { router } from 'expo-router';
 
 export default function NotificationsScreen() {

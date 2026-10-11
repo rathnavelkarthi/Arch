@@ -6,18 +6,20 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: '#2463eb', // Primary color
-        tabBarInactiveTintColor: '#94a3b8',
+        tabBarActiveTintColor: '#0f172a',
+        tabBarInactiveTintColor: '#8e8e93',
         tabBarStyle: {
+          backgroundColor: '#ffffff',
           borderTopWidth: 1,
-          borderTopColor: '#e2e8f0',
-          height: 60,
+          borderTopColor: '#e5e5ea',
+          height: 64,
           paddingBottom: 8,
           paddingTop: 8,
         },
         tabBarLabelStyle: {
-          fontSize: 12,
-          fontWeight: '500',
+          fontSize: 11,
+          fontWeight: '600',
+          letterSpacing: -0.2,
         },
       }}>
       <Tabs.Screen

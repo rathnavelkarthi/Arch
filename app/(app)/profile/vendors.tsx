@@ -6,7 +6,7 @@ import { router } from 'expo-router';
 
 export default function VendorsDirectoryScreen() {
   const vendors = [
-    { id: 1, name: 'BuildVerse Supplies', category: 'General Construction', rating: '4.9', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDArv6o3vPGmzB--MSHL2bUkaDRhJxhg5hF5YYIQ7yZcI7yqZc2rGe6l4xbZTToIX8_cGE0ckj-y3rv_JAiZBC14CAXk7PaByA1-cUhZzds0vlcmfG3xozgZwfT4q2ms_VkLHb3aEJA8YQk0ST70Oo0JcXsb_pe5Vrax9QHs3Q7ARwKGnrrbVbNAHcdBOBYn12XwF0Rzf-f6F9EvD1R_T8a2sQrFbNKtwn7xzwRgH4zbSfkygXVwpkMd54CWsuzLATblbOc0_3pxSA' },
+    { id: 1, name: 'Ilam Mora Supplies', category: 'General Construction', rating: '4.9', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDArv6o3vPGmzB--MSHL2bUkaDRhJxhg5hF5YYIQ7yZcI7yqZc2rGe6l4xbZTToIX8_cGE0ckj-y3rv_JAiZBC14CAXk7PaByA1-cUhZzds0vlcmfG3xozgZwfT4q2ms_VkLHb3aEJA8YQk0ST70Oo0JcXsb_pe5Vrax9QHs3Q7ARwKGnrrbVbNAHcdBOBYn12XwF0Rzf-f6F9EvD1R_T8a2sQrFbNKtwn7xzwRgH4zbSfkygXVwpkMd54CWsuzLATblbOc0_3pxSA' },
     { id: 2, name: 'Luminate Lighting', category: 'Electrical & Lighting', rating: '4.7', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDnWC3yfwe57R_5uR3E3bI-JcelUnbFBsChMk0i9toioKf4H3NWuJzoTRWmqU2xkyL9M8q4PgsIYXNVMuY5p3XQppi5TKYJ5jRxpnw-88cgSEhfuGTtylvBwq_Ny0AnogISY6a3l0z2OHwx8F73_iwN5FLLiTCGv4ZUnwKq5f1ekBVK3GX3mV9NjU9g23DL5VL7d9_l5g7_G9C6gq2jHo1vk3j9D1WWpwpiYzyVlJzPTlnVFW07utboaK4sF40vApW89usOm4_7VPo' },
   ];
 

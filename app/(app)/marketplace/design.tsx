@@ -34,7 +34,7 @@ export default function DesignMarketplaceScreen() {
           <TouchableOpacity onPress={() => router.back()}>
             <ArrowLeft size={20} color="#475569" />
           </TouchableOpacity>
-          <Text style={styles.brandName}>BuildVerse</Text>
+          <Text style={styles.brandName}>Ilam Mora</Text>
         </View>
         <View style={styles.headerRight}>
           <TouchableOpacity style={styles.iconBtn}><Search size={20} color="#64748b" /></TouchableOpacity>

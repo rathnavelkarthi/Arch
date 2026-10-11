@@ -1,5 +1,7 @@
+import { useAccountActions } from '@/hooks/use-account-actions';
+import { BrandedLoader } from '@/components/branded-loader';
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, SafeAreaView, KeyboardAvoidingView, Platform } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, SafeAreaView, ScrollView, KeyboardAvoidingView, Platform } from 'react-native';
 import { Link, router } from 'expo-router';
 import { Mail, Lock, Eye, EyeOff, Building2 } from 'lucide-react-native';
 
@@ -8,10 +10,8 @@ export default function LoginScreen() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = () => {
-    // Returning user bypasses user-type and goes straight to dashboard
-    router.replace('/(app)/(tabs)/dashboard');
-  };
+  const { submit, busy, error, message } = useAccountActions();
+  const handleLogin = () => submit(email, password);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -19,15 +19,15 @@ export default function LoginScreen() {
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         style={styles.keyboardView}
       >
-        <View style={styles.card}>
+        <ScrollView contentContainerStyle={{flexGrow:1, justifyContent:'center'}}><View style={[styles.card, {width:'100%', maxWidth:520, alignSelf:'center'}]}>
           
           {/* Header Section */}
           <View style={styles.headerContainer}>
             <View style={styles.iconCircle}>
               <Building2 size={40} color="#2463eb" />
             </View>
-            <Text style={styles.title}>BuildVerse</Text>
-            <Text style={styles.subtitle}>Constructing the future of design</Text>
+            <Text style={styles.title}>Ilam Mora</Text>
+            <Text style={styles.subtitle}>Curated Living & Architectural Studio</Text>
           </View>
 
           {/* Form Section */}
@@ -56,7 +56,7 @@ export default function LoginScreen() {
             <View style={styles.inputGroup}>
               <View style={styles.passwordHeader}>
                 <Text style={styles.label}>Password</Text>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => router.push('/account-recovery')}>
                   <Text style={styles.forgotPassword}>Forgot password?</Text>
                 </TouchableOpacity>
               </View>
@@ -83,32 +83,17 @@ export default function LoginScreen() {
               </View>
             </View>
 
-            {/* Login Button */}
-            <TouchableOpacity style={styles.primaryButton} onPress={handleLogin}>
-              <Text style={styles.primaryButtonText}>Continue</Text>
+            {error && <Text accessibilityRole="alert" style={{color:'#b91c1c', marginBottom:12}}>{error}</Text>}
+                {message && <Text accessibilityRole="alert" style={{color:'#2463eb', marginBottom:12}}>{message}</Text>}
+                {/* Submit Button */}
+            <TouchableOpacity accessibilityRole="button" disabled={busy} style={[styles.primaryButton, busy && {opacity:0.6}]} onPress={handleLogin}>
+              {busy ? <BrandedLoader compact label="Please wait" /> : <Text style={styles.primaryButtonText}>Continue</Text>}
             </TouchableOpacity>
 
-            {/* Divider */}
-            <View style={styles.dividerContainer}>
-              <View style={styles.divider} />
-              <Text style={styles.dividerText}>OR CONTINUE WITH</Text>
-              <View style={styles.divider} />
-            </View>
-
-            {/* Demo User Login */}
-            <TouchableOpacity 
-              style={styles.googleButton}
-              onPress={() => {
-                setEmail('demo@buildverse.com');
-                setPassword('password123');
-                setTimeout(() => handleLogin(), 500);
-              }}
-            >
-              <Text style={styles.googleButtonText}>Sign in as Demo User</Text>
-            </TouchableOpacity>
+            <Link href="/(app)/(tabs)/dashboard" style={{textAlign:'center', color:'#2463eb', padding:16}}>Browse the app</Link>
 
             <View style={styles.footer}>
-              <Text style={styles.footerText}>Don't have an account? </Text>
+              <Text style={styles.footerText}>Don&apos;t have an account? </Text>
               <Link href="/(auth)/signup-iconic" asChild>
                 <TouchableOpacity>
                   <Text style={styles.createAccount}>Create account</Text>
@@ -118,6 +103,7 @@ export default function LoginScreen() {
           </View>
           
         </View>
+        </ScrollView>
       </KeyboardAvoidingView>
     </SafeAreaView>
   );
@@ -242,38 +228,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
   },
-  dividerContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginVertical: 24,
-  },
-  divider: {
-    flex: 1,
-    height: 1,
-    backgroundColor: '#e2e8f0',
-  },
-  dividerText: {
-    marginHorizontal: 16,
-    fontSize: 12,
-    fontWeight: '500',
-    color: '#94a3b8',
-    letterSpacing: 1,
-  },
-  googleButton: {
-    height: 52,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderWidth: 1,
-    borderColor: '#e2e8f0',
-    borderRadius: 12,
-    backgroundColor: '#ffffff',
-  },
-  googleButtonText: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: '#334155',
-  },
+
   footer: {
     flexDirection: 'row',
     justifyContent: 'center',

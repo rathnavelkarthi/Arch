@@ -1,3 +1,5 @@
+import { useAccountActions } from '@/hooks/use-account-actions';
+import { BrandedLoader } from '@/components/branded-loader';
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, SafeAreaView, KeyboardAvoidingView, ScrollView, Platform } from 'react-native';
 import { router, Link } from 'expo-router';
@@ -9,10 +11,8 @@ export default function SignUpScreen() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSignUp = () => {
-    // Navigate straight to user-type selection after sign up
-    router.push('/(auth)/user-type');
-  };
+  const { submit, busy, error, message } = useAccountActions();
+  const handleSignUp = () => submit(email, password, fullName);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -37,7 +37,7 @@ export default function SignUpScreen() {
 
               {/* Title Section */}
               <View style={styles.titleContainer}>
-                <Text style={styles.title}>Join BuildVerse</Text>
+                <Text style={styles.title}>Join Ilam Mora</Text>
                 <Text style={styles.subtitle}>Create your professional account</Text>
               </View>
 
@@ -102,21 +102,11 @@ export default function SignUpScreen() {
                   </View>
                 </View>
 
+                {error && <Text accessibilityRole="alert" style={{color:'#b91c1c', marginBottom:12}}>{error}</Text>}
+                {message && <Text accessibilityRole="alert" style={{color:'#2463eb', marginBottom:12}}>{message}</Text>}
                 {/* Submit Button */}
-                <TouchableOpacity style={styles.primaryButton} onPress={handleSignUp}>
-                  <Text style={styles.primaryButtonText}>Create Account</Text>
-                </TouchableOpacity>
-
-                {/* Divider */}
-                <View style={styles.dividerContainer}>
-                  <View style={styles.divider} />
-                  <Text style={styles.dividerText}>Or continue with</Text>
-                  <View style={styles.divider} />
-                </View>
-
-                {/* Google Sign Up */}
-                <TouchableOpacity style={styles.googleButton}>
-                  <Text style={styles.googleButtonText}>Sign up with Google</Text>
+                <TouchableOpacity accessibilityRole="button" disabled={busy} style={[styles.primaryButton, busy && {opacity:0.6}]} onPress={handleSignUp}>
+                  {busy ? <BrandedLoader compact label="Please wait" /> : <Text style={styles.primaryButtonText}>Create Account</Text>}
                 </TouchableOpacity>
 
               </View>
@@ -136,7 +126,7 @@ export default function SignUpScreen() {
             {/* Terms Footer */}
             <View style={styles.termsFooter}>
               <Text style={styles.termsText}>
-                By joining, you agree to BuildVerse's{' '}
+                By joining, you agree to Ilam Mora&apos;s{' '}
                 <Text style={styles.termsLink}>Terms of Service</Text> and{' '}
                 <Text style={styles.termsLink}>Privacy Policy</Text>.
               </Text>
@@ -254,36 +244,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
   },
-  dividerContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginVertical: 24,
-  },
-  divider: {
-    flex: 1,
-    height: 1,
-    backgroundColor: '#e2e8f0',
-  },
-  dividerText: {
-    marginHorizontal: 16,
-    fontSize: 14,
-    color: '#64748b',
-  },
-  googleButton: {
-    height: 52,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderWidth: 1,
-    borderColor: '#e2e8f0',
-    borderRadius: 12,
-    backgroundColor: '#ffffff',
-  },
-  googleButtonText: {
-    fontSize: 14,
-    fontWeight: '500',
-    color: '#334155',
-  },
+
   authLinkContainer: {
     flexDirection: 'row',
     justifyContent: 'center',

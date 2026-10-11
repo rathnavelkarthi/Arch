@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity, TextInput, ImageBackground, Image } from 'react-native';
-import { ChevronLeft, Plus, Square, Minus, Sparkles, Home, Store, Layers, User } from 'lucide-react-native';
+import { View, Text, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity, TextInput, Image } from 'react-native';
+import { ChevronLeft, Plus, Square, Minus, Sparkles, Store } from 'lucide-react-native';
 import { router } from 'expo-router';
 
 export default function AIGeneratorScreen() {

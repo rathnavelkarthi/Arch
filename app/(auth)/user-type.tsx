@@ -64,7 +64,7 @@ export default function UserTypeSelectionScreen() {
             <View style={styles.logoIcon}>
               <Building2 size={16} color="#ffffff" />
             </View>
-            <Text style={styles.logoText}>BuildVerse</Text>
+            <Text style={styles.logoText}>Ilam Mora</Text>
           </View>
           <View style={{ width: 40 }} /> {/* Spacer for centering */}
         </View>
@@ -72,7 +72,7 @@ export default function UserTypeSelectionScreen() {
         <ScrollView contentContainerStyle={styles.scrollContent}>
           
           <View style={styles.titleContainer}>
-            <Text style={styles.title}>Let's get started</Text>
+            <Text style={styles.title}>Let&apos;s get started</Text>
             <Text style={styles.subtitle}>What best describes you?</Text>
           </View>
 

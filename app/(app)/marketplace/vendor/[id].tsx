@@ -109,7 +109,7 @@ export default function VendorDetailScreen() {
         <View style={styles.sectionWrap}>
           <Text style={styles.sectionTitle}>About the Supplier</Text>
           <Text style={styles.aboutText}>
-            BuildVerse Pro Supplies is a leading provider of high-grade construction materials across the Tri-State area. We specialize in custom-fabricated structural steel, reinforced concrete solutions, and sustainable building components. Our facility holds ISO 9001 certification and we are committed to providing carbon-neutral delivery options for large-scale urban developments.
+            Ilam Mora Pro Supplies is a leading provider of high-grade construction materials across the region. We specialize in custom-fabricated structural steel, reinforced concrete solutions, and sustainable building components. Our facility holds ISO 9001 certification and we are committed to providing carbon-neutral delivery options for large-scale urban developments.
           </Text>
         </View>
 
@@ -147,7 +147,7 @@ export default function VendorDetailScreen() {
                 <CheckCircle size={20} color="#22c55e" fill="#22c55e" />
                 <View style={{ marginLeft: 12 }}>
                   <Text style={styles.verifyTitle}>License & Insurance</Text>
-                  <Text style={styles.verifyDesc}>Verified by BuildVerse Compliance Team</Text>
+                  <Text style={styles.verifyDesc}>Verified by Ilam Mora Compliance Team</Text>
                 </View>
               </View>
               <View style={styles.verifyRow}>

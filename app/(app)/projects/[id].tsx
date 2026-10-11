@@ -1,10 +1,9 @@
 import React from 'react';
 import { View, Text, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity, ImageBackground, Image } from 'react-native';
-import { ArrowLeft, MoreVertical, Maximize2, CheckCircle2, Compass, FileText, MoreHorizontal, Plus } from 'lucide-react-native';
-import { router, useLocalSearchParams } from 'expo-router';
+import { ArrowLeft, MoreVertical, Maximize2, CheckCircle2, Compass, FileText, Plus } from 'lucide-react-native';
+import { router } from 'expo-router';
 
 export default function ProjectDetailWorkspace() {
-  const { id } = useLocalSearchParams();
 
   return (
     <SafeAreaView style={styles.container}>

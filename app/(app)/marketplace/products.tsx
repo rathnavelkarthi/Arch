@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, ScrollView, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { ArrowLeft, Search, ShoppingCart, ChevronDown, Star } from 'lucide-react-native';
+import { Search, ShoppingCart, ChevronDown, Star } from 'lucide-react-native';
 import { router } from 'expo-router';
 
 export default function ProductListingScreen() {
@@ -43,7 +43,7 @@ export default function ProductListingScreen() {
           <View style={styles.logoBox}>
             <Text style={styles.logoText}>A</Text>
           </View>
-          <Text style={styles.brandName}>BuildVerse</Text>
+          <Text style={styles.brandName}>Ilam Mora</Text>
         </TouchableOpacity>
         <View style={styles.headerRight}>
           <TouchableOpacity style={styles.iconBtn}>

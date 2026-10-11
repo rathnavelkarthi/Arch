@@ -1,9 +1,10 @@
 import { Stack } from 'expo-router';
+import { BrandedLoader } from '@/components/branded-loader';
+import { useAuth } from '@/providers/auth-provider';
 
 export default function AppLayout() {
-  return (
-    <Stack screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-    </Stack>
-  );
+  const { loading } = useAuth();
+  if (loading) return <BrandedLoader label="Restoring your session" />;
+  return <Stack screenOptions={{ headerShown: false }} />;
 }
+

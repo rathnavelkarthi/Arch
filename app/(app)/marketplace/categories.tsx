@@ -59,7 +59,7 @@ export default function MaterialCategoriesScreen() {
           <View style={styles.aiBanner}>
             <View style={{ flex: 1, marginRight: 16 }}>
               <Text style={styles.bannerTitle}>Custom Request?</Text>
-              <Text style={styles.bannerDesc}>Can't find what you need? Use our AI material scout.</Text>
+              <Text style={styles.bannerDesc}>Can&apos;t find what you need? Use our AI material scout.</Text>
             </View>
             <TouchableOpacity style={styles.bannerBtn}>
               <Text style={styles.bannerBtnText}>Try AI Scout</Text>
